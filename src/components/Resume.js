@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 
 export default function Resume() {
@@ -6,7 +7,7 @@ export default function Resume() {
       <h2 className="text-3xl font-bold mb-12 text-center text-yellow-400">Checkout my Resume</h2>
       
       <div className="max-w-lg mx-auto bg-white dark:bg-gray-900 bg-opacity-5 rounded-xl p-6 text-center">
-        <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+      <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
           <Image 
             src="/profile-image.png" 
             width={80} 

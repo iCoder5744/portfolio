@@ -39,7 +39,7 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="flex items-center mb-4"
         >
-          <span className="text-yellow-400 font-bold mr-2">3+ Months</span>
+          <span className="text-yellow-400 font-bold mr-2">9+ Months</span>
           <span className="mx-2">Experience</span>
         </motion.div>
 

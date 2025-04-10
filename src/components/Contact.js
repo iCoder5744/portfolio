@@ -1,3 +1,4 @@
+'use client';
 export default function Contact() {
     const socialLinks = [
       { name: 'LinkedIn', icon: 'in', url: '#', color: 'text-blue-600' },

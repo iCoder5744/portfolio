@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 
 export default function Projects() {
@@ -40,7 +41,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className={`project-card p-6 ${project.color} text-white`}
+            className={`project-card p-6 bg-purple-700 text-white dark:bg-gray-800 dark:text-white ${project.color} text-white`}
           >
             <div className="md:flex gap-6 ">
               <div className="mb-6 md:mb-0 md:w-1/2 ">

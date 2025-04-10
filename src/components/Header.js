@@ -9,7 +9,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   
   return (
-    <header className="py-2 px-6 md:px-12 flex justify-between items-center bg-red-100">
+    <header className="py-2 px-6 md:px-12 flex justify-between items-cente ">
       <div className="flex items-center gap-2">
         <div className="rounded-full bg-black dark:bg-white p-1 w-10 h-10 flex items-center justify-center">
           <span className="text-white dark:text-black font-bold text-sm">SY</span>
@@ -20,9 +20,9 @@ export default function Header() {
       <div className="flex items-center gap-4">
         <button 
           onClick={toggleTheme}
-          className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center"
+          className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 dark:text-white flex items-center justify-center"
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+         {theme === 'dark' ? '☀️' : '🌙'}
         </button>
         
         <button 

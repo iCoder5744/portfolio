@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -14,6 +17,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @layer components {
