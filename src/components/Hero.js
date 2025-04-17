@@ -58,7 +58,7 @@ export default function Hero() {
         </motion.div>
 
         <div className="relative w-full max-w-md">
-          <div className="absolute inset-0 bg-yellow-400 rounded-full opacity-50 blur-3xl -z-10"></div>
+          <div className="absolute inset-0 bg-yellow-200 rounded-full opacity-50 blur-3xl -z-10"></div>
           <div className="relative z-10 flex flex-col items-center">
             <div className="relative w-64 h-64 rounded-full bg-yellow-400 overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
@@ -67,7 +67,7 @@ export default function Hero() {
                   width={260}
                   height={240}
                   alt="Shivam Yadav"
-                  className="object-cover"
+                  className="object-cover z-10"
                 />
               </div>
             </div>

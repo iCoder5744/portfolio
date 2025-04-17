@@ -6,10 +6,10 @@ export default function Resume() {
     <section id="resume" className="py-16 px-6 md:px-12">
       <h2 className="text-3xl font-bold mb-12 text-center text-yellow-400">Checkout my Resume</h2>
       
-      <div className="max-w-lg mx-auto bg-white dark:bg-gray-900 bg-opacity-5 rounded-xl p-6 text-center">
-      <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+      <div className="max-w-lg mx-auto bg-white dark:bg-gray-900 rounded-xl p-6 text-center border border-gray-300 dark:border-gray-700">
+        <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
           <Image 
-            src="/profile-image.png" 
+            src="/images/Profile.png" 
             width={80} 
             height={80} 
             alt="Nikunj Thesiya"
@@ -18,7 +18,7 @@ export default function Resume() {
         </div>
         
         <h3 className="text-xl font-bold mb-2 text-yellow-400">Nikunj Thesiya</h3>
-        <p className="mb-6">Front End Developer / Web Designer / UI Developer</p>
+        <p className="mb-6 text-gray-700 dark:text-gray-300">Front End Developer / Web Designer / UI Developer</p>
         
         <div className="flex justify-center gap-4">
           <a 

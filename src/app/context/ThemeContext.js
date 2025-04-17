@@ -4,6 +4,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+  // Default to 'light' theme
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
 
@@ -12,11 +13,17 @@ export const ThemeProvider = ({ children }) => {
     // Set mounted state to true (important for hydration)
     setMounted(true);
     
-    // Check for saved theme in localStorage or use system preference
-    const savedTheme = localStorage.getItem('theme') || 
-      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    // Check for saved theme in localStorage or use 'light' as default
+    const savedTheme = localStorage.getItem('theme') || 'light';
     
     setTheme(savedTheme);
+    
+    // Apply theme immediately on load
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, []);
 
   // Effect to update DOM when theme changes
@@ -40,8 +47,15 @@ export const ThemeProvider = ({ children }) => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
   };
 
+  // Provide value to avoid hydration mismatch
+  const value = {
+    theme,
+    toggleTheme,
+    mounted
+  };
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
