@@ -8,12 +8,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   
   return (
-    <header className='py-2 bg-white dark:bg-gray-900 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center shadow-sm sticky top-0 z-20'>
+    <nav className='py-2 bg-white dark:bg-gray-900 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center shadow-sm sticky top-0 z-20'>
       <div className="flex items-center gap-2">
         <div className="rounded-full bg-black dark:bg-white p-1 w-10 h-10 flex items-center justify-center">
           <span className="text-white dark:text-black font-bold text-sm">SY</span>
         </div>
-        <span className="font-bold">Shivam Yadav</span>
+        <span className="font-bold text-black ">Shivam Yadav</span>
       </div>
       
       <div className="flex items-center gap-4">
@@ -44,6 +44,6 @@ export default function Header() {
           </ul>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

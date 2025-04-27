@@ -21,16 +21,16 @@ export default function Projects() {
       color: 'bg-pink-700',
       url: 'https://netflix-clone-beryl-ten-10.vercel.app/'
     },
-    {
-      id: 3,
-      name: 'Epiko Market',
-      description: 'An e-commerce marketplace platform',
-      type: ['Website'],
-      technologies: ['Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Redux', 'jQuery'],
-      image: '/market-app.png',
-      color: 'bg-orange-400',
-      url: '#'
-    }
+    // {
+    //   id: 3,
+    //   name: 'Epiko Market',
+    //   description: 'An e-commerce marketplace platform',
+    //   type: ['Website'],
+    //   technologies: ['Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Redux', 'jQuery'],
+    //   image: '/market-app.png',
+    //   color: 'bg-orange-400',
+    //   url: '#'
+    // }
   ];
 
   return (
