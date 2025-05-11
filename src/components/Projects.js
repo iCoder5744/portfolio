@@ -34,8 +34,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-12 px-6 md:px-12">
-      <h2 className="text-2xl mb-12 text-center px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400 text-gray-800">Projects I&apos;ve Worked on</h2>
+    <section id="projects" className="project-card  p-6 my-12 mx-6 md:mx-12 border border-gray-400 bg-white shadow-lg ">
+      <h2 className="text-xl mb-12 text-center px-6 py-2 w-fit rounded-full mx-auto bg-white text-gray-800 border border-gray-400">Projects I&apos;ve Worked on</h2>
 
       <div className="space-y-8 max-w-4xl mx-auto">
         {projects.map((project) => (
