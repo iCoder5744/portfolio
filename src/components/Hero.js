@@ -2,11 +2,13 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Navbar from './Navbar';
 
 export default function Hero() {
   return (
-    <section className="py-10 px-6 md:px-12 lg:py-10">
-      <div className="flex flex-col items-center text-center">
+    <section className=' '>
+      <Navbar />
+      <div className=" flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,33 +73,6 @@ export default function Hero() {
                 />
               </div>
             </div>
-
-            {/* <div className="mt-6 grid grid-cols-3 gap-4">
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-gray-200 rounded-full"></span>
-                Next.JS
-              </div>
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-blue-400 rounded-full"></span>
-                Tailwind CSS
-              </div>
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-yellow-400 rounded-full"></span>
-                JavaScript
-              </div>
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-blue-600 rounded-full"></span>
-                React.JS
-              </div>
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-purple-600 rounded-full"></span>
-                GraphQL
-              </div>
-              <div className="skill-pill bg-white text-black dark:bg-gray-800 dark:text-white">
-                <span className="w-4 h-4 bg-pink-500 rounded-full"></span>
-                Figma
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

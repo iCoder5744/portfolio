@@ -33,12 +33,12 @@ export default function Navbar() {
   };
   
   return (
-    <nav className={`py-3 ${isScrolled ? 'shadow-md' : ''} bg-white dark:bg-gray-900 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center sticky top-0 z-20 transition-all duration-300`}>
+    <nav className={` py-3 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center  sticky top-0 z-20 transition-all duration-300`}>
       <div className="flex items-center gap-2">
         <div className="rounded-full bg-yellow-400 dark:bg-yellow-400 p-1 w-10 h-10 flex items-center justify-center">
           <span className="text-black dark:text-black font-bold text-sm">SY</span>
         </div>
-        <span className="font-bold text-black dark:text-white">Shivam Yadav</span>
+        <span className="font-bold ">Shivam Yadav</span>
       </div>
       
       <div className="flex items-center gap-4">
@@ -60,21 +60,21 @@ export default function Navbar() {
       
       {/* Menu Drawer */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50" onClick={() => setMenuOpen(false)}>
+        <div className="fixed inset-0 z-50 style={{ backgroundColor: 'rgba(243, 244, 246, 0.5)' }}" onClick={() => setMenuOpen(false)}>
           <div 
             className="absolute top-0 right-0 h-full w-64 bg-white dark:bg-gray-800 shadow-xl transform transition-transform duration-300"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
-              <h3 className="font-bold text-lg text-black dark:text-white">Menu</h3>
+              <h3 className="px-4 py-2 rounded-md bg-yellow-400 text-black font-medium cursor-pointer transition-colors duration-300 hover:bg-yellow-500">Menu</h3>
               <button 
                 onClick={() => setMenuOpen(false)}
-                className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
+                className="w-8 h-8 flex items-center justify-center rounded-full text-black "
               >
                 ✕
               </button>
             </div>
-            <ul className="p-4">
+            <ul className="py-4 px-8 ">
               <li 
                 className="py-3 px-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors duration-200 text-black dark:text-white"
                 onClick={() => scrollToSection('hero')}

@@ -10,7 +10,7 @@ export default function Contact() {
     ];
     
     return (
-      <section id="contact" className="py-16 px-6 md:px-12">
+      <section id="contact" className="my-16 mx-6 md:mx-12 p-6 rounded-2xl">
         <h2 className="text-2xl  mb-12 px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400  text-gray-800">Connect With Me</h2>
         
         <div className="max-w-lg mx-auto mb-8">
@@ -105,7 +105,7 @@ export default function Contact() {
         
 
         <div className="mt-6 flex flex-col mx-auto items-center justify-center">        
-          <p className="text-xs mt-2 text-gray-400">Designed & Built by Shivam Yadav</p>
+          <p className="text-lg mt-2">Designed by Shivam Yadav</p>
         </div>
     </section>
   );

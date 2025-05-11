@@ -8,7 +8,7 @@ import Contact from '../components/Contact';
 export default function Home() {
   return (
     <main className="min-h-screen w-full transition-colors duration-300">
-      <Navbar />
+      
       <Hero />
       <About />
       <Skills />
