@@ -21,7 +21,7 @@ body {
 
 @layer components {
   .skill-pill {
-    @apply px-4 py-2 rounded-full flex items-center justify-center gap-2 font-medium text-sm;
+    @apply px-3 py-1 rounded-full flex items-center justify-center gap-2 font-medium text-sm;
   }
   
   .project-card {

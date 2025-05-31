@@ -1,16 +1,26 @@
 'use client';
+
+import Skills from '../components/Skills';
+
 export default function About() {
+
+
+
   return (
     <section id="about" className="py-16 px-6 md:px-12">
       <h2 className="text-2xl mb-12 text-center px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400 text-gray-800">About Me</h2>
 
       {/* =============== Education ================ */}
       <div className="mt-12 p-6 rounded-xl border border-gray-400 bg-white">
-      <p className="text-lg mb-8 text-center text-gray-800 dark:textwhite font-serif">
-        Hi, I'm Shivam Yadav — a Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products.
-      </p>
+
+        {/* Discription */}
+        <p className="text-lg mb-8 text-center text-gray-800 dark:textwhite font-serif">
+          Hi, I'm Shivam Yadav — A Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products.
+        </p>
+
+        {/* Education */}
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-400 dark:border-gray-700">
+          <div className="bg-white rounded-xl p-4 border border-gray-400">
             <div className="flex justify-between items-center mb-4">
               <div className="px-3 py-1 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded-md">
                 2023 - 2024
@@ -31,7 +41,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-400 dark:border-gray-700">
+          <div className="bg-white rounded-xl p-4 border border-gray-400 ">
             <div className="flex justify-between items-center mb-4 text-black">
               <div className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-md">
                 2024 - 2027
@@ -52,7 +62,15 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* Skill */}
+        
+        <Skills />
+
+
+
       </div>
+
     </section>
   );
 }

@@ -21,20 +21,11 @@ export default function Projects() {
       color: 'bg-pink-700',
       url: 'https://netflix-clone-beryl-ten-10.vercel.app/'
     },
-    // {
-    //   id: 3,
-    //   name: 'Epiko Market',
-    //   description: 'An e-commerce marketplace platform',
-    //   type: ['Website'],
-    //   technologies: ['Bootstrap', 'Tailwind CSS', 'SCSS', 'React', 'Redux', 'jQuery'],
-    //   image: '/market-app.png',
-    //   color: 'bg-orange-400',
-    //   url: '#'
-    // }
+   
   ];
 
   return (
-    <section id="projects" className="project-card  p-6 my-12 mx-6 md:mx-12 border border-gray-400 bg-white shadow-lg ">
+    <section id="projects" className="project-card  p-6 my-6 mx-6 md:mx-12 border border-gray-400 bg-white shadow-lg ">
       <h2 className="text-xl mb-12 text-center px-6 py-2 w-fit rounded-full mx-auto bg-white text-gray-800 border border-gray-400">Projects I&apos;ve Worked on</h2>
 
       <div className="space-y-8 max-w-4xl mx-auto">

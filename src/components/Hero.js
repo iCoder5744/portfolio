@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 
 export default function Hero() {
   return (
-    <section className='border h-screen  '>
+    <section className=' h-screen  '>
       <Navbar />
       <div className=" flex flex-col items-center text-center">
         <motion.div
