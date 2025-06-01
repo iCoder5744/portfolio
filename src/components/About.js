@@ -1,6 +1,7 @@
 'use client';
 
 import Skills from '../components/Skills';
+import Projects from './Projects';
 
 export default function About() {
 
@@ -8,13 +9,13 @@ export default function About() {
 
   return (
     <section id="about" className="py-16 px-6 md:px-12">
-      <h2 className="text-2xl mb-12 text-center px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400 text-gray-800">About Me</h2>
+      <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400 text-gray-800">About Me</h2>
 
       {/* =============== Education ================ */}
-      <div className="mt-12 p-6 rounded-xl border border-gray-400 bg-white">
+      <div className=" p-2 sm:p-6 rounded-xl border border-gray-400 bg-white max-w-[1000px] mx-auto">
 
         {/* Discription */}
-        <p className="text-lg mb-8 text-center text-gray-800 dark:textwhite font-serif">
+        <p className="text-lg mb-4 text-center text-gray-800 dark:textwhite font-serif">
           {"Hi, I'm Shivam Yadav — A Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products."}
         </p>
 
@@ -67,7 +68,7 @@ export default function About() {
         
         <Skills />
 
-
+        <Projects />
 
       </div>
 
