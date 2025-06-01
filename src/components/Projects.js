@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '@mui/material/Button';
-import { Button as MUIButton } from '@mui/material';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -60,11 +59,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="project-card p-4 sm:p-6 my-6 border border-gray-400 bg-white shadow-lg"
+      className="project-card px-2 sm:px-4 py-4 my-6 border border-gray-400 bg-white shadow-lg"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
         {/* Left side buttons */}
-        <div className="flex flex-wrap sm:flex-nowrap md:flex-col gap-4 my-auto w-full md:w-1/5">
+        <div className="flex flex-wrap max-sm:justify-center sm:flex-nowrap md:flex-col gap-4 my-auto w-full md:w-1/5">
           {projects.map((project) => (
             <button
               key={project.id}
@@ -78,7 +77,7 @@ export default function Projects() {
         </div>
 
         {/* Right side selected project details */}
-        <div className={`project-card w-full md:w-4/5 p-2 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
+        <div className={`project-card w-full md:w-4/5 px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
           <div className="flex flex-col md:flex-row gap-4 items-stretch">
             {/* Image Section */}
             <div className="mb-4 md:mb-0 md:w-1/2">
@@ -123,7 +122,7 @@ export default function Projects() {
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-2">
+              <div className="flex justify-between sm:gap-3">
                 {selectedProject.url && selectedProject.url !== '#' && (
                   <a
                     href={selectedProject.url}

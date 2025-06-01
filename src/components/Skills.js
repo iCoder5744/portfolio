@@ -34,7 +34,7 @@ export default function skills() {
         <section id="skills" className="">
 
             {/* Skill */}
-            <div className=" mt-4 max-w-7xl mx-auto rounded-xl p-4 border border-gray-400 bg-white shadow-lg ">
+            <div className=" mt-4 max-w-7xl mx-auto rounded-xl px-2 sm:px-4 py-4 border border-gray-400 bg-white shadow-lg ">
 
                 <div className="mb-4 ">
                     <h3 className="text-sm text-bold mb-3 px-2 py-1 text-black bg-gray-200  rounded-md w-fit">Design Tools I Use</h3>
