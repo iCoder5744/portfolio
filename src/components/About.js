@@ -1,7 +1,8 @@
 'use client';
 
-import Skills from '../components/Skills';
+import Skills from './Skills';
 import Projects from './Projects';
+import Footer from './Footer';
 
 export default function About() {
 
@@ -67,7 +68,14 @@ export default function About() {
         
         <Skills />
 
+        {/* Project */}
+
         <Projects />
+
+        {/* Contact */}
+
+         <Footer />
+        
 
       </div>
 

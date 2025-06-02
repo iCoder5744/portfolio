@@ -15,7 +15,7 @@ export default function Projects() {
       technologies: ['Next.js', 'Tailwind', 'SSR', 'MongoDB'],
       image: '/images/courtbook.png',
       favicon: '/images/courtbook-favicon.png',
-      color: 'bg-yellow-600',
+      color: 'bg-gray-600',
       className: 'w-full h-full object-fit',
       url: 'https://courtbook.in/',
     },
@@ -27,7 +27,7 @@ export default function Projects() {
       technologies: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React-icons', 'Material-UI'],
       image: '/images/Youtube-Clone.png',
       favicon: '/images/youtube-favicon.png',
-      color: 'bg-purple-700',
+      color: 'bg-red-800',
       url: 'https://youtube-clone-seven-indol.vercel.app/',
     },
     {
@@ -38,7 +38,7 @@ export default function Projects() {
       technologies: ['React.Js', 'JavaScript', 'Tailwind CSS', 'React-icons', 'Firebase'],
       image: '/images/Netflix-Clone.png',
       favicon: '/images/netflix-favicon.png',
-      color: 'bg-pink-700',
+      color: 'bg-purple-800',
       url: 'https://netflix-clone-beryl-ten-10.vercel.app/',
     },
     {
@@ -108,7 +108,7 @@ export default function Projects() {
               </div>
 
               <div className="mb-4 sm:mb-6">
-                <p className="font-medium mb-2 text-gray-200">Technologies I&apos;ve used</p>
+                <p className="font-medium mb-2 text-gray-200">Technologies used</p>
                 <div className="flex flex-wrap gap-2 text-gray-100">
                   {selectedProject.technologies.map((tech, index) => (
                     <span
