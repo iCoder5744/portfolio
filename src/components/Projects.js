@@ -140,6 +140,7 @@ export default function Projects() {
                   <Button
                     variant="contained"
                     color="primary"
+                    border='1px solid white'
                     href={selectedProject.url}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -150,6 +151,7 @@ export default function Projects() {
                         bgcolor: '#3a3d5c',
                       },
                       color: 'white',
+                      border: '1px solid gray',
                       textTransform: 'none',
                       fontWeight: 500,
                       borderRadius: '6px',

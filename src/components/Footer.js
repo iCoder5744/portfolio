@@ -1,17 +1,6 @@
 'use client';
 
 import {
-  Box,
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Grid,
-  Paper,
-  IconButton,
-  Avatar
-} from '@mui/material';
-import {
   LinkedIn,
   Instagram,
   Facebook,
@@ -30,98 +19,93 @@ export default function Footer() {
   ];
 
   return (
-    <Box component="section" id="contact" sx={{ my: 10, px: 2 }}>
-      <Container maxWidth="sm" >
+    <section id="contact" className="my-10 px-0 sm:px-4 md:px-8">
+      <div className="max-w-3xl mx-auto ">
 
-
-        <Box display="flex" justifyContent="center" gap={2} flexWrap="wrap" mb={3}>
+        {/* Social Icons */}
+        <div className="flex justify-center flex-wrap gap-4 mb-6">
           {socialLinks.map((link, idx) => (
-            <IconButton
+            <a
               key={idx}
-              component="a"
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              sx={{
-                color: link.color,
-                border: '1px solid #ccc',
-                backgroundColor: '#fff',
-                boxShadow: 2,
-                transition: 'transform 0.2s',
-                '&:hover': {
-                  transform: 'scale(1.1)',
-                  backgroundColor: '#f9f9f9'
-                }
-              }}
+              className="p-3 rounded-full border border-gray-300 bg-white shadow transition-transform duration-200 hover:scale-110 hover:bg-gray-100"
+              style={{ color: link.color }}
             >
               {link.icon}
-            </IconButton>
+            </a>
           ))}
-        </Box>
+        </div>
 
-        <Box textAlign="center" mb={6}>
-          <Button
-            component="a"
+        {/* Email Button */}
+        <div className="text-center mb-8">
+          <a
             href="mailto:shivam.coder01@gmail.com"
-            variant="outlined"
-            startIcon={<Email sx={{ color: '#D44638' }} />}
-            sx={{
-              borderColor: '#ccc',
-              backgroundColor: '#fff',
-              boxShadow: 2,
-              textTransform: 'none',
-              ':hover': {
-                backgroundColor: '#f5f5f5'
-              }
-            }}
+            className="inline-flex items-center text-gray-700 gap-2 px-4 py-2 border border-gray-300 shadow text-sm bg-white hover:bg-gray-100 transition rounded"
           >
-            shivam.coder01@gmail.com
-          </Button>
-        </Box>
+            <Email sx={{ color: '#D44638' }} />
+            <span>shivam.coder01@gmail.com</span>
+          </a>
+        </div>
 
-        <Paper
-          elevation={1}
-          sx={{
-            p: { xs: 3, sm: 4 },
-            borderRadius: 4,
-            backgroundColor: 'background.paper'
-          }}
-        >
-          <Typography variant="h5" align="center" fontWeight="bold" mb={3}>
-            Contact Me
-          </Typography>
+        {/* Contact Form */}
+        <div className="bg-white text-gray-600 rounded-xl border border-gray-400 shadow-md px-4 py-6 sm:px-6 md:px-8 max-w-lg mx-auto">
+          <h2 className="text-xl font-bold text-center mb-6">Contact Me</h2>
 
-          <Grid container spacing={3} direction="column">
-            <Grid item>
-              <TextField label="Full Name *" fullWidth required variant="outlined" />
-            </Grid>
-            <Grid item>
-              <TextField label="Email *" fullWidth required variant="outlined" type="email" />
-            </Grid>
-            <Grid item>
-              <TextField label="Mobile No." fullWidth variant="outlined" type="tel" />
-            </Grid>
-            <Grid item>
-              <TextField
-                label="Message *"
-                fullWidth
+          <form className="space-y-3 sm:space-y-5">
+            <div>
+              <label className="block mb-1 text-sm font-medium">Full Name *</label>
+              <input
+                type="text"
                 required
-                multiline
-                rows={5}
-                variant="outlined"
+                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
               />
-            </Grid>
-          </Grid>
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm font-medium">Email *</label>
+              <input
+                type="email"
+                required
+                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm font-medium">Mobile No.</label>
+              <input
+                type="tel"
+                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-1 text-sm font-medium">Message *</label>
+              <textarea
+                rows="5"
+                required
+                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+            </div>
+
+            <div className="text-center pt-2">
+              <button
+                type="submit"
+                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
 
 
-        </Paper>
-
-        <Box mt={6} textAlign="center">
-          <Typography variant="body2" color="textSecondary">
-            Designed by Shivam Yadav
-          </Typography>
-        </Box>
-      </Container>
-    </Box>
+        {/* Footer Note */}
+        <div className="mt-6 text-center text-sm text-gray-500">
+          Designed by Shivam Yadav
+        </div>
+      </div>
+    </section>
   );
 }
