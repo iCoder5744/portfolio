@@ -12,7 +12,7 @@ export default function Projects() {
       name: 'CourtBook',
       displayName: 'CourtBook',
       type: ['CourtBook-Website'],
-      technologies: ['Next.js', 'Tailwind', 'SSR', 'MongoDB'],
+      technologies: ['Next.js', 'Tailwind CSS', 'SSR', 'MongoDB'],
       image: '/images/courtbook.png',
       favicon: '/images/courtbook-favicon.png',
       color: 'bg-gray-600',
@@ -61,7 +61,7 @@ export default function Projects() {
       id="projects"
       className="project-card px-2 sm:px-4 py-4 my-6 border border-gray-400 bg-white shadow-lg"
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-6">
+<div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-6">
         {/* Left side buttons */}
         <div className="flex flex-wrap max-sm:justify-center sm:flex-nowrap md:flex-col gap-4 my-auto w-full md:w-1/5">
           {projects.map((project) => (
@@ -78,17 +78,17 @@ export default function Projects() {
 
         {/* Right side selected project details */}
         <div className={`project-card w-full md:w-4/5 px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
-          <div className="flex flex-col md:flex-row gap-4 items-stretch">
+          <div className="flex flex-col md:flex-row gap-4 ">
             {/* Image Section */}
             <div className="mb-4 md:mb-0 md:w-1/2">
               <div className="h-[200px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
                 <Image
-                  src={selectedProject.image || '/placeholder-project.png'}
-                  alt={selectedProject.name}
-                  width={500}
-                  height={300}
-                  className={`w-full h-full object-fit ${selectedProject.id === 1 ? 'object-cover' : 'object-fit'}`}
-                />
+  src={selectedProject.image || '/placeholder-project.png'}
+  alt={selectedProject.name}
+  width={500}
+  height={300}
+  className="w-full h-full object-cover"
+/>
               </div>
             </div>
 
@@ -155,8 +155,8 @@ export default function Projects() {
                       textTransform: 'none',
                       fontWeight: 500,
                       borderRadius: '6px',
-                      px: 2,
-                      py: 1,
+                      px: 1,
+                      py: 0,
                       fontSize: '0.875rem',
                     }}
                   >

@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Contact Form */}
-        <div className="bg-white text-gray-600 rounded-xl border border-gray-400 shadow-md px-4 py-6 sm:px-6 md:px-8 max-w-lg mx-auto">
+        {/* <div className="bg-white text-gray-600 rounded-xl border border-gray-400 shadow-md px-4 py-6 sm:px-6 md:px-8 max-w-lg mx-auto">
           <h2 className="text-xl font-bold text-center mb-6">Contact Me</h2>
 
           <form className="space-y-3 sm:space-y-5">
@@ -98,7 +98,7 @@ export default function Footer() {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
 
 
         {/* Footer Note */}
