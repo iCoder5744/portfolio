@@ -6,8 +6,8 @@ import { useTheme } from '../app/context/ThemeContext';
 
 const Footer = () => {
 
-      const { theme, toggleTheme } = useTheme();
-    
+    const { theme, toggleTheme } = useTheme();
+
 
     return (
         <section>
@@ -16,7 +16,7 @@ const Footer = () => {
 
                 {/* Left: Contact Button */}
                 <div>
-                    <p className='text-gray-500'>@ Copyright 2025</p>
+                    <p className='text-gray-500'>&copy; 2025 Shivam Yadav</p>
                 </div>
 
                 {/* Right: Theme */}

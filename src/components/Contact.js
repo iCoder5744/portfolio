@@ -24,7 +24,7 @@ export default function Contact() {
 
         <div className='flex flex-col text-center gap-y-8 mb-10 text-black'>
           <h3 className='text-xl font-bold font-serif'>Have A Project?</h3>
-          <h1 className='text-4xl font-bold font-serif'>{"Let's talk with me"}</h1>
+          <h1 className='text-4xl font-bold font-serif'>{"Let's talk with me"}</h1> 
         </div>
 
         {/* Social Icons */}
