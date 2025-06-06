@@ -61,108 +61,114 @@ export default function Projects() {
       id="projects"
       className="project-card px-2 sm:px-4 py-4 my-6 border border-gray-400 bg-white shadow-lg"
     >
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-6">
-        {/* Left side buttons */}
-        <div className="flex flex-wrap max-sm:justify-center sm:flex-nowrap md:flex-col gap-4 my-auto w-full md:w-1/5">
-          {projects.map((project) => (
-            <button
-              key={project.id}
-              onClick={() => setSelectedProject(project)}
-              className={`px-3 py-2 rounded-md text-white font-semibold transition duration-200 cursor-pointer
-              ${project.color} ${selectedProject.id === project.id ? 'scale-105 ring-2 ring-white' : ''}`}
-            >
-              {project.name}
-            </button>
-          ))}
-        </div>
 
-        {/* Right side selected project details */}
-        <div className={`project-card w-full md:w-4/5 px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
-          <div className="flex flex-col md:flex-row gap-4 ">
-            {/* Image Section */}
-            <div className="mb-4 md:mb-0 md:w-1/2">
-              <div className="h-[200px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
-                <Image
-                  src={selectedProject.image || '/placeholder-project.png'}
-                  alt={selectedProject.name}
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+      <div className='text-center'>
+        <h1 className='text-2xl text-black font-bold mb-6 font-serif'>Discover how I work</h1>
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-6">
+          {/* Left side buttons */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:flex md:flex-col  gap-4 my-auto w-full md:w-1/5">
+            {projects.map((project) => (
+              <button
+                key={project.id}
+                onClick={() => setSelectedProject(project)}
+                className={`w-full px-3 py-2 rounded-md text-white font-semibold transition duration-200 cursor-pointer
+                ${project.color}`}
+              >
+                {project.name}
+              </button>
+            ))}
+          </div>
 
-            {/* Details Section */}
-            <div className="md:w-1/2 pl-0 md:pl-3">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-xl sm:text-2xl font-bold">{selectedProject.displayName}</h3>
-                <div className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center overflow-hidden">
+
+
+          {/* Right side selected project details */}
+          <div className={`project-card w-full md:w-4/5 px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
+            <div className="flex flex-col md:flex-row gap-4 ">
+              {/* Image Section */}
+              <div className="mb-4 md:mb-0 md:w-1/2">
+                <div className="h-[200px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
                   <Image
-                    src={selectedProject.favicon || '/images/default-favicon.png'}
-                    alt={`${selectedProject.name} favicon`}
-                    width={40}
-                    height={40}
-                    className="object-cover"
+                    src={selectedProject.image || '/placeholder-project.png'}
+                    alt={selectedProject.name}
+                    width={500}
+                    height={300}
+                    className="w-full h-full sm:object-cover"
                   />
                 </div>
               </div>
 
-              <div className="mb-4 sm:mb-6">
-                <p className="font-medium mb-2 text-gray-200">Technologies used</p>
-                <div className="flex flex-wrap gap-2 text-gray-100">
-                  {selectedProject.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-white text-black bg-opacity-20 rounded-md text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+              {/* Details Section */}
+              <div className="md:w-1/2 pl-0 md:pl-3">
+                <div className="flex justify-between items-center mb-2">
+                  <h3 className="text-xl sm:text-2xl font-bold">{selectedProject.displayName}</h3>
+                  <div className="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center overflow-hidden">
+                    <Image
+                      src={selectedProject.favicon || '/images/default-favicon.png'}
+                      alt={`${selectedProject.name} favicon`}
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Buttons */}
-              <div className="flex justify-between sm:gap-3">
-                {selectedProject.url && selectedProject.url !== '#' && (
-                  <a
-                    href={selectedProject.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className=" inline-flex items-center justify-center gap-3 px-4 py-2 text-gray-600 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full text-sm font-medium"
-                  >
-                    <span className="leading-none">Go to {selectedProject.name}</span>
-                    <span className="text-2xl flex items-center justify-center leading-none">→</span>
-                  </a>
-                )}
+                <div className="mb-4 sm:mb-6">
+                  <p className="text-start font-medium mb-2 text-gray-200">Technologies used</p>
+                  <div className="flex flex-wrap gap-2 text-gray-100">
+                    {selectedProject.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-3 py-1 bg-white text-black bg-opacity-20 rounded-md text-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
 
-                {/* Only show for CourtBook */}
-                {selectedProject.id === 1 && (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    border='1px solid white'
-                    href={selectedProject.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    startIcon={<LaunchIcon />}
-                    sx={{
-                      bgcolor: '#2c2f48',
-                      '&:hover': {
-                        bgcolor: '#3a3d5c',
-                      },
-                      color: 'white',
-                      border: '1px solid gray',
-                      textTransform: 'none',
-                      fontWeight: 500,
-                      borderRadius: '6px',
-                      px: 1,
-                      py: 0,
-                      fontSize: '0.875rem',
-                    }}
-                  >
-                    Live
-                  </Button>
-                )}
+                {/* Buttons */}
+                <div className="flex justify-between sm:gap-3">
+                  {selectedProject.url && selectedProject.url !== '#' && (
+                    <a
+                      href={selectedProject.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className=" inline-flex items-center justify-center gap-3 px-4 py-2 text-gray-600 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full text-sm font-medium"
+                    >
+                      <span className="leading-none">Go to {selectedProject.name}</span>
+                      <span className="text-2xl flex items-center justify-center leading-none">→</span>
+                    </a>
+                  )}
+
+                  {/* Only show for CourtBook */}
+                  {selectedProject.id === 1 && (
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      border='1px solid white'
+                      href={selectedProject.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      startIcon={<LaunchIcon />}
+                      sx={{
+                        bgcolor: '#2c2f48',
+                        '&:hover': {
+                          bgcolor: '#3a3d5c',
+                        },
+                        color: 'white',
+                        border: '1px solid gray',
+                        textTransform: 'none',
+                        fontWeight: 500,
+                        borderRadius: '6px',
+                        px: 2,
+                        py: 0,
+                        fontSize: '0.875rem',
+                      }}
+                    >
+                      Live
+                    </Button>
+                  )}
+                </div>
               </div>
             </div>
           </div>

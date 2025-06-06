@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useTheme } from '../app/context/ThemeContext';
-import Image from 'next/image';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();

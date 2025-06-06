@@ -28,7 +28,7 @@ export default function Hero() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
-            Hello! I&apos;m <span className="text-yellow-400">Shivam Yadav</span>
+            Hello! I&apos;m <span className="text-yellow-400">𝓢𝓱𝓲𝓿𝓪𝓶 𝓨𝓪𝓭𝓪𝓿</span>
           </motion.h1>
 
           {/* Subheading */}
