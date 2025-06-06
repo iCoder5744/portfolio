@@ -10,39 +10,49 @@ export const ThemeProvider = ({ children }) => {
   const [mounted, setMounted] = useState(false);
 
   // Use effect to handle initial theme detection and setup
-  useEffect(() => {
-    // Set mounted state to true (important for hydration)
-    setMounted(true);
-    
-    // Check for saved theme in localStorage or use 'light' as default
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    
-    setTheme(savedTheme);
-    
-    // Apply theme immediately on load
-    if (savedTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
+useEffect(() => {
+  setMounted(true);
 
-  // Effect to update DOM when theme changes
-  useEffect(() => {
-    if (!mounted) return;
-    
-    // Save theme to localStorage
-    localStorage.setItem('theme', theme);
-    
-    // Update HTML class for Tailwind
-    if (theme === 'dark') {
+  // Try to get theme from sessionStorage (for refresh)
+  const sessionTheme = sessionStorage.getItem('theme');
+
+  if (sessionTheme) {
+    setTheme(sessionTheme);
+    if (sessionTheme === 'dark') {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
       document.documentElement.classList.add('light');
       document.documentElement.classList.remove('dark');
     }
-  }, [theme, mounted]);
+  } else {
+    // If no theme in sessionStorage => default to dark (first load or tab reopen)
+    setTheme('dark');
+    sessionStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  }
+}, []);
+
+
+
+
+  // Effect to update DOM when theme changes
+ useEffect(() => {
+  if (!mounted) return;
+
+  // Save current theme only in sessionStorage (not localStorage)
+  sessionStorage.setItem('theme', theme);
+
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  } else {
+    document.documentElement.classList.add('light');
+    document.documentElement.classList.remove('dark');
+  }
+}, [theme, mounted]);
+
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
