@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { useState } from 'react';
 
 
 export default function Header() {
@@ -14,7 +13,7 @@ export default function Header() {
   return (
     <section>
         {/* Top Section */}
-        <div className='flex justify-between items-center  border-b border-gray-300 p-4 sm:px-14 sm:py-6 rounded-t-[3rem] sm:rounded-t-[6rem] '>
+        <div className='flex justify-between items-center  border-b border-gray-300 p-4 sm:px-14 sm:py-7 rounded-t-[3rem] sm:rounded-t-[6rem] '>
 
           {/* Left: Contact Button */}
           <div>
