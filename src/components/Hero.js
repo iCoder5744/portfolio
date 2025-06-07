@@ -5,13 +5,20 @@ import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 
 export default function Hero() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="h-full flex flex-col">
       <Navbar />
 
       <div className="flex-1 flex items-center justify-center mt-14 sm:mt-10 px-4">
         <div className="flex flex-col items-center text-center w-full max-w-xl">
-          
+
           {/* 👋 Emoji */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +55,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="flex items-center mb-4"
           >
-            <span className="text-yellow-400 font-bold mr-2">9+ Months</span>
+            <span className="text-yellow-400 font-bold mr-2">4+ Months</span>
             <span>Experience</span>
           </motion.div>
 
@@ -66,8 +73,9 @@ export default function Hero() {
               Resume
             </a>
             <a
-              href="#contact"
-              className="px-6 py-1 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-all"
+              
+              onClick={() => scrollToSection('contact')}
+              className="px-6 py-1 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-all cursor-pointer"
             >
               Hire Me
             </a>
