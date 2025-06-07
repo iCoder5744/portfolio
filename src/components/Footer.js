@@ -16,7 +16,7 @@ const Footer = () => {
 
                 {/* Left: Contact Button */}
                 <div>
-                    <p className='text-gray-500'>&copy; 2025 Shivam Yadav</p>
+                    <p className='max-sm:text-sm text-gray-500'>&copy; 2025 Shivam Yadav</p>
                 </div>
 
                 {/* Right: Theme */}
