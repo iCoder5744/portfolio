@@ -20,9 +20,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className=" mt-20 px-0 sm:px-4 md:px-8">
-      <div className=" border-t border-t-gray-300 pt-8 pb-2 max-w-3xl mx-auto ">
+      <div className=" border-t  pt-8 pb-2 max-w-3xl mx-auto border-gray-300 ">
 
-        <div className='flex flex-col text-center gap-y-6 mb-10 text-black'>
+        <div className='flex flex-col text-center gap-y-6 mb-10 '>
           <h3 className='text-xl font-bold font-serif'>Have A Project?</h3>
           <h1 className='text-4xl font-bold font-serif'>{"Let's talk with me"}</h1> 
         </div>
@@ -106,7 +106,7 @@ export default function Contact() {
         </div> */}
 
                 {/* Footer Note */}
-        <div className="mt-20 text-center text-medium text-gray-900">
+        <div className="mt-20 text-center text-medium">
           <h3>Designed by Shivam Yadav</h3>
         </div>
 
