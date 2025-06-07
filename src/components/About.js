@@ -43,7 +43,7 @@ export default function About() {
                 <div className="px-3 py-1 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded-md">
                   2023 - 2024
                 </div>
-                <div className="px-3 py-1 text-black bg-gray-200 dark:bg-black rounded-md">
+                <div className="px-3 py-1 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded-md">
                   Intermediate
                 </div>
               </div>
@@ -61,10 +61,10 @@ export default function About() {
 
             <div className="bg-white rounded-xl px-2 sm:px-4 py-4 border border-gray-400 shadow-lg">
               <div className="flex justify-between items-center mb-4 text-black">
-                <div className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-md">
+                <div className="px-3 py-1 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded-md">
                   2024 - 2027
                 </div>
-                <div className="px-3 py-1 bg-gray-200 dark:bg-gray-800 rounded-md">
+                <div className="px-3 py-1 bg-gray-200 text-black dark:bg-gray-800 dark:text-white rounded-md">
                   Graduation
                 </div>
               </div>
