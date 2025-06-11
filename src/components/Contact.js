@@ -105,11 +105,6 @@ export default function Contact() {
           </form>
         </div> */}
 
-                {/* Footer Note */}
-        <div className="mt-20 text-center text-medium">
-          <h3>Designed by Shivam Yadav</h3>
-        </div>
-
 
       </div>
 

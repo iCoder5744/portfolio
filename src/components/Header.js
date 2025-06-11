@@ -1,8 +1,12 @@
-import React from 'react'
+'use client';
 
-
+import Link from 'next/link';
+import React from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -12,26 +16,37 @@ export default function Header() {
 
   return (
     <section>
-        {/* Top Section */}
-        <div className='flex justify-between items-center  border-b border-gray-400  p-4 sm:px-14 sm:py-7 rounded-t-[2rem] sm:rounded-t-[6rem] '>
+      {/* Top Section */}
+      <div className='flex justify-between items-center border-b border-gray-400 p-4 sm:px-14 sm:py-7 rounded-t-[2rem] sm:rounded-t-[6rem]'>
 
-          {/* Left: Contact Button */}
-          <div>
+        {/* Left: Contact or Logo based on current route */}
+        <div>
+          {pathname === '/' ? (
             <button
               onClick={() => scrollToSection('contact')}
-              className=' max-sm:text-sm font-medium  border px-4 py-1 rounded-full cursor-pointer'
+              className='text-gray-700 max-sm:text-sm font-medium border border-gray-700 px-4 py-1 rounded-full cursor-pointer'
             >
               Contact
             </button>
-          </div>
-
-          {/* Right: Blog | Tools | Game */}
-          <div className='flex gap-3 sm:gap-6  max-sm:text-sm font-medium'>
-            <a href='#blog'>Blog</a>
-            <a href='#tools'>Tools</a>
-            <a href='#game'>Game</a>
-          </div>
+          ) : (
+            <Link href="/">
+              <div className="flex items-center gap-2 cursor-pointer">
+                <div className="rounded-full bg-yellow-400 dark:bg-yellow-400 p-1 w-10 h-10 flex items-center justify-center">
+                  <span className="text-black dark:text-black font-bold text-sm">SY</span>
+                </div>
+                <span className="font-bold ">Shivam Yadav</span>
+              </div>
+            </Link>
+          )}
         </div>
+
+        {/* Right: Blog | Tools | Game */}
+        <div className='text-gray-700 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
+          <Link href="/blog">Blog</Link>
+          <Link href="/tools">Tools</Link>
+          <Link href="/game">Game</Link>
+        </div>
+      </div>
     </section>
-  )
-};
+  );
+}

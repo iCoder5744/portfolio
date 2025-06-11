@@ -1,10 +1,9 @@
+'use client'; // ✅ Add this line
+
 import { ThemeProviderWrapper } from './context/ThemeProviderWrapper';
 import './globals.css';
 
-export const metadata = {
-  title: 'Portfolio - Shivam Yadav',
-  description: 'Shivam Yadav Portfolio',
-};
+
 
 export default function RootLayout({ children }) {
   return (
