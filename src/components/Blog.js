@@ -8,7 +8,7 @@ export default function BlogPage() {
           bg-gray-700 transition-all duration-300">
       <Header />
 
-      <div className="p-10">
+      <div className="p-10 text-white">
         <h1 className="text-2xl font-bold">Blog Page</h1>
         <p className="mt-4">This is your blog content.</p>
       </div>

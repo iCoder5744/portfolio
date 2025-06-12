@@ -10,7 +10,7 @@ export default function FileConverter() {
   };
 
   return (
-    <div>
+    <div className="text-white">
       <h2 className="text-2xl font-bold mb-4">Document Converter</h2>
       <p className="mb-6">Upload your file and convert it to a supported format.</p>
       <div className="flex items-center gap-4 mb-6">
