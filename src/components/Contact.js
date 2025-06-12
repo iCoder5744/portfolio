@@ -23,8 +23,8 @@ export default function Contact() {
       <div className=" border-t  pt-8 pb-2 max-w-3xl mx-auto border-gray-300 ">
 
         <div className='flex flex-col text-center gap-y-6 mb-10 '>
-          <h3 className='text-xl font-bold font-serif'>Have A Project?</h3>
-          <h1 className='text-4xl font-bold font-serif'>{"Let's talk with me"}</h1> 
+          <h3 className='text-white text-xl font-bold font-serif'>Have A Project?</h3>
+          <h1 className='text-white text-4xl font-bold font-serif'>{"Let's talk with me"}</h1> 
         </div>
 
         {/* Social Icons */}
@@ -53,58 +53,6 @@ export default function Contact() {
             <span>shivam.coder01@gmail.com</span>
           </a>
         </div>
-
-        {/* Contact Form */}
-        {/* <div className="bg-white text-gray-600 rounded-xl border border-gray-400 shadow-md px-4 py-6 sm:px-6 md:px-8 max-w-lg mx-auto">
-          <h2 className="text-xl font-bold text-center mb-6">Contact Me</h2>
-
-          <form className="space-y-3 sm:space-y-5">
-            <div>
-              <label className="block mb-1 text-sm font-medium">Full Name *</label>
-              <input
-                type="text"
-                required
-                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block mb-1 text-sm font-medium">Email *</label>
-              <input
-                type="email"
-                required
-                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block mb-1 text-sm font-medium">Mobile No.</label>
-              <input
-                type="tel"
-                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block mb-1 text-sm font-medium">Message *</label>
-              <textarea
-                rows="5"
-                required
-                className="w-full border text-gray-400 rounded px-3 py-2 outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-            </div>
-
-            <div className="text-center pt-2">
-              <button
-                type="submit"
-                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div> */}
-
 
       </div>
 

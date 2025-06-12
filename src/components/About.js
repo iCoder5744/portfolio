@@ -19,8 +19,8 @@ export default function About() {
     <section id="about" className="py-16 px-2 md:px-6 lg:mx-12">
       <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-yellow-400 text-gray-800">About Me</h2>
 
-      <div className="rounded-[2rem] sm:rounded-[6rem] border-2 border-gray-400 max-w-[1000px] mx-auto
-          bg-white text-black transition-all duration-300">
+      <div className="rounded-[2rem] sm:rounded-[4rem] border-2 border-gray-100 max-w-[1000px] mx-auto
+          bg-gray-700 transition-all duration-300">
 
         {/* Header */}
         <Header />
@@ -28,7 +28,7 @@ export default function About() {
         <div className='p-2 sm:px-6 lg:px-10 sm:pt-6 '>
 
           {/* Discription */}
-          <p className="text-md sm:text-lg mb-4 text-center font-serif">
+          <p className="text-gray-200 text-md sm:text-lg mb-4 text-center font-serif">
             {"Hi, I'm Shivam Yadav — A Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products."}
           </p>
 
