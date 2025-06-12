@@ -18,11 +18,11 @@ export default function ToolsPage() {
   ];
 
   return (
-    <div className="rounded-[2rem] sm:rounded-[4rem] border-2 border-gray-400 max-w-[1000px] mx-auto my-20
-          bg-white text-black transition-all duration-300">
+    <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-auto my-20
+          bg-gray-700 transition-all duration-300">
       <Header />
-      <h1 className="text-3xl font-bold mb-10 py-10 text-center">Available Tools</h1>
-      <div className="grid sm:grid-cols-2 gap-6 ">
+      <h1 className="text-3xl font-bold mb-10 py-10 text-center text-white">Available Tools</h1>
+      <div className="grid sm:grid-cols-2 gap-6 px-14 ">
         {tools.map((tool) => (
           <div key={tool.slug} className="border rounded-xl p-6 bg-gray-800 text-white">
             <h2 className="text-xl font-semibold">{tool.title}</h2>

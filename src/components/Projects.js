@@ -86,7 +86,7 @@ export default function Projects() {
             <div className="flex flex-col md:flex-row gap-4 ">
               {/* Image Section */}
               <div className="mb-4 md:mb-0 md:w-1/2">
-                <div className="max-sm:h-[230px] max-lg:h-[250px] h-[230px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
+                <div className="max-sm:h-[200px] max-lg:h-[250px] h-[230px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
                   <Image
                     src={selectedProject.image || '/placeholder-project.png'}
                     alt={selectedProject.name}

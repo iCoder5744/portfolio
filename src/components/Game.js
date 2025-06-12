@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 
 export default function GamePage() {
   return (
-      <div className="rounded-[2rem] sm:rounded-[4rem] border-2 border-gray-400 max-w-[1000px] mx-auto my-20
-          bg-white text-black transition-all duration-300">
+      <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-auto my-20
+          bg-gray-700 transition-all duration-300">
       <Header />
 
     <div className="p-10">

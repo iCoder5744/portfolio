@@ -32,7 +32,7 @@ export default function Header() {
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
                 <div className="rounded-full bg-yellow-400 dark:bg-yellow-400 p-1 w-10 h-10 flex items-center justify-center">
-                  <span className=" font-bold text-sm">SY</span>
+                  <span className="text-black font-bold text-sm">SY</span>
                 </div>
                 <span className="font-bold text-white">Shivam Yadav</span>
               </div>
