@@ -160,7 +160,7 @@ export default function BlogPage() {
           bg-gray-800 transition-all duration-300">
       <Header />
 
-      <div className="p-3 sm:p-6 md:p-10 text-white">
+      <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -174,7 +174,7 @@ export default function BlogPage() {
         {/* Featured Post */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 text-center">📌 Featured Article</h2>
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform hover:scale-105">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform ">
             <div className="text-6xl mb-4 text-center">{featuredPost.image}</div>
             <h3 className="text-2xl font-bold mb-3">{featuredPost.title}</h3>
             <p className="text-gray-100 mb-4 leading-relaxed">{featuredPost.excerpt}</p>
@@ -206,7 +206,7 @@ export default function BlogPage() {
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {category.posts.map((post, postIndex) => (
-                  <article key={postIndex} className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-lg">
+                  <article key={postIndex} className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform  hover:shadow-lg">
                     <h3 className="text-xl font-bold mb-3 text-blue-300 hover:text-blue-200">
                       {post.title}
                     </h3>
