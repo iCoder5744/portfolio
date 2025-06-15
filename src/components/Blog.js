@@ -156,11 +156,11 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-1 sm:mx-4 md:mx-6 lg:mx-auto my-4 sm:my-8 md:my-20
+    <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto my-4 sm:my-8 md:my-20
           bg-gray-800 transition-all duration-300">
       <Header />
 
-      <div className="p-6 sm:p-10 text-white">
+      <div className="p-3 sm:p-6 md:p-10 text-white">
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -241,9 +241,9 @@ export default function BlogPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-800 border-2 border-white focus:outline-none   focus:ring-white"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-100 border-2 border-white focus:outline-none   focus:ring-white"
             />
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
               Subscribe
             </button>
           </div>
