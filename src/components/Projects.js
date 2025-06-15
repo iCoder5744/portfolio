@@ -12,7 +12,7 @@ export default function Projects() {
       name: 'CourtBook',
       displayName: 'CourtBook',
       type: ['CourtBook-Website'],
-      technologies: ['Next.js', 'Tailwind CSS', 'SSR', 'MongoDB'],
+      technologies: ['Next.js', 'Tailwind CSS', 'SSR', 'Node.js', 'MongoDB'],
       image: '/images/courtbook.png',
       favicon: '/images/courtbook-favicon.png',
       color: 'bg-gray-600',
@@ -27,7 +27,7 @@ export default function Projects() {
       technologies: ['Next.js', 'Tailwind CSS', 'JavaScript', 'React-icons', 'Material-UI'],
       image: '/images/Youtube-Clone.png',
       favicon: '/images/youtube-favicon.png',
-      color: 'bg-red-800',
+      color: 'bg-red-900',
       url: 'https://youtube-clone-seven-indol.vercel.app/',
     },
     {
@@ -82,7 +82,7 @@ export default function Projects() {
 
 
           {/* Right side selected project details */}
-          <div className={`project-card w-full md:w-4/5 px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
+          <div className={`project-card w-full md:w-4/5 max-sm:h-[450px] px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
             <div className="flex flex-col md:flex-row gap-4 ">
               {/* Image Section */}
               <div className="mb-4 md:mb-0 md:w-1/2">
@@ -117,11 +117,11 @@ export default function Projects() {
 
                 <div className="mb-4 sm:mb-6">
                   <p className="text-start font-medium mb-2 text-gray-200">Technologies used</p>
-                  <div className="flex flex-wrap gap-2 text-gray-100">
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 text-gray-100">
                     {selectedProject.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-white text-black bg-opacity-20 rounded-md text-sm"
+                        className="px-3 py-1 bg-white text-black bg-opacity-20 rounded-md text-xs sm:text-sm"
                       >
                         {tech}
                       </span>

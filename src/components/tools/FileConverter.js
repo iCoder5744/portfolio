@@ -202,9 +202,9 @@ export default function FileConverter() {
             <select
               value={targetFormat}
               onChange={(e) => setTargetFormat(e.target.value)}
-              className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white"
+              className="w-full p-3  bg-gray-800 border border-gray-600 rounded-lg text-white"
             >
-              <option value="">Select target format</option>
+              <option value="" className="">Select target format</option>
               {categories[category].formats.map(format => (
                 <option key={format} value={format}>{format}</option>
               ))}
@@ -227,7 +227,7 @@ export default function FileConverter() {
             
             <div className="space-y-3">
               {files.map((file) => (
-                <div key={file.id} className="bg-gray-800 p-4 rounded-lg flex items-center justify-between">
+                <div key={file.id} className="bg-gray-800 p-3 rounded-lg flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <CategoryIcon className="w-6 h-6 text-blue-400" />
                     <div>
