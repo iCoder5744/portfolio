@@ -3,6 +3,12 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Link from 'next/link';
 
+
+export const metadata = {
+  title: 'Tools | Shivam Yadav',
+  description: 'Use Tools',
+};
+
 export default function ToolsPage() {
   const tools = [
     {
