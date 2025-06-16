@@ -1,11 +1,12 @@
 'use client'
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaCalculator, FaBalanceScale, FaTemperatureHigh, FaRulerCombined, FaMoneyBillWave, FaPercent } from "react-icons/fa";
 
 const CalculatorApp = () => {
   const [activeCalculator, setActiveCalculator] = useState("basic");
-  
+
   // Basic Calculator State
   const [display, setDisplay] = useState("0");
   const [previousValue, setPreviousValue] = useState(null);
@@ -166,7 +167,7 @@ const CalculatorApp = () => {
   // Geometry Calculator Functions
   const calculateGeometry = () => {
     let newResults = {};
-    
+
     switch (shape) {
       case "circle":
         const radius = parseFloat(dimensions.radius) || 0;
@@ -238,7 +239,7 @@ const CalculatorApp = () => {
 
   const convertUnits = () => {
     if (!inputValue || !fromUnit || !toUnit) return;
-    
+
     const value = parseFloat(inputValue);
     const baseValue = value / units[unitType][fromUnit];
     const result = baseValue * units[unitType][toUnit];
@@ -362,22 +363,22 @@ const CalculatorApp = () => {
       </div>
 
       <div className="grid grid-cols-4 gap-2">
-        {[7,8,9,'÷'].map((btn) => (
+        {[7, 8, 9, '÷'].map((btn) => (
           <button key={btn} onClick={() => setScientificDisplay(prev => prev === "0" ? String(btn) : prev + btn)} className="bg-gray-600 hover:bg-gray-500 p-3 rounded-lg font-semibold">
             {btn}
           </button>
         ))}
-        {[4,5,6,'×'].map((btn) => (
+        {[4, 5, 6, '×'].map((btn) => (
           <button key={btn} onClick={() => setScientificDisplay(prev => prev === "0" ? String(btn) : prev + btn)} className="bg-gray-600 hover:bg-gray-500 p-3 rounded-lg font-semibold">
             {btn}
           </button>
         ))}
-        {[1,2,3,'-'].map((btn) => (
+        {[1, 2, 3, '-'].map((btn) => (
           <button key={btn} onClick={() => setScientificDisplay(prev => prev === "0" ? String(btn) : prev + btn)} className="bg-gray-600 hover:bg-gray-500 p-3 rounded-lg font-semibold">
             {btn}
           </button>
         ))}
-        {[0,'.','=','+'].map((btn) => (
+        {[0, '.', '=', '+'].map((btn) => (
           <button key={btn} onClick={() => setScientificDisplay(prev => prev === "0" ? String(btn) : prev + btn)} className="bg-gray-600 hover:bg-gray-500 p-3 rounded-lg font-semibold">
             {btn}
           </button>
@@ -395,9 +396,8 @@ const CalculatorApp = () => {
           <button
             key={s}
             onClick={() => setShape(s)}
-            className={`px-4 py-2 rounded-lg capitalize ${
-              shape === s ? 'bg-blue-600' : 'bg-gray-600'
-            }`}
+            className={`px-4 py-2 rounded-lg capitalize ${shape === s ? 'bg-blue-600' : 'bg-gray-600'
+              }`}
           >
             {s}
           </button>
@@ -411,7 +411,7 @@ const CalculatorApp = () => {
             <input
               type="number"
               value={dimensions.radius || ""}
-              onChange={(e) => setDimensions({...dimensions, radius: e.target.value})}
+              onChange={(e) => setDimensions({ ...dimensions, radius: e.target.value })}
               className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg"
             />
           </div>
@@ -424,7 +424,7 @@ const CalculatorApp = () => {
               <input
                 type="number"
                 value={dimensions.length || ""}
-                onChange={(e) => setDimensions({...dimensions, length: e.target.value})}
+                onChange={(e) => setDimensions({ ...dimensions, length: e.target.value })}
                 className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg"
               />
             </div>
@@ -433,7 +433,7 @@ const CalculatorApp = () => {
               <input
                 type="number"
                 value={dimensions.width || ""}
-                onChange={(e) => setDimensions({...dimensions, width: e.target.value})}
+                onChange={(e) => setDimensions({ ...dimensions, width: e.target.value })}
                 className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg"
               />
             </div>
@@ -447,7 +447,7 @@ const CalculatorApp = () => {
               <input
                 type="number"
                 value={dimensions.base || ""}
-                onChange={(e) => setDimensions({...dimensions, base: e.target.value})}
+                onChange={(e) => setDimensions({ ...dimensions, base: e.target.value })}
                 className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg"
               />
             </div>
@@ -456,7 +456,7 @@ const CalculatorApp = () => {
               <input
                 type="number"
                 value={dimensions.height || ""}
-                onChange={(e) => setDimensions({...dimensions, height: e.target.value})}
+                onChange={(e) => setDimensions({ ...dimensions, height: e.target.value })}
                 className="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg"
               />
             </div>
@@ -493,9 +493,8 @@ const CalculatorApp = () => {
           <button
             key={type}
             onClick={() => setUnitType(type)}
-            className={`px-4 py-2 rounded-lg capitalize ${
-              unitType === type ? 'bg-green-600' : 'bg-gray-600'
-            }`}
+            className={`px-4 py-2 rounded-lg capitalize ${unitType === type ? 'bg-green-600' : 'bg-gray-600'
+              }`}
           >
             {type}
           </button>
@@ -693,6 +692,13 @@ const CalculatorApp = () => {
 
   return (
     <div className="text-white min-h-screen px-3 sm:p-6">
+
+      {/* Back to Tool */}
+      <Link href="/tools" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
+        <span className="mr-2">←</span>
+        Back to Tools
+      </Link>
+
       <div className="max-w-4xl mx-auto mt-8">
         <h2 className="text-3xl font-bold mb-2 text-center">All-in-One Calculator</h2>
         <p className="text-gray-300 text-center mb-10">Every calculation you need in one place</p>
@@ -704,11 +710,10 @@ const CalculatorApp = () => {
               <button
                 key={key}
                 onClick={() => setActiveCalculator(key)}
-                className={`p-4 rounded-xl border-2 transition-all text-sm ${
-                  activeCalculator === key
+                className={`p-4 rounded-xl border-2 transition-all text-sm ${activeCalculator === key
                     ? 'border-blue-500 bg-blue-500/20'
                     : 'border-gray-600 hover:border-gray-500'
-                }`}
+                  }`}
               >
                 <Icon className="w-8 h-8 mx-auto mb-2" />
                 <span className="text-sm font-medium">{calc.name}</span>

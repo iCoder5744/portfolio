@@ -1,4 +1,4 @@
-// app/blog/page.js (replace existing content)
+// app/blog/page.js 
 import Blog from '@/components/Blog';
 
 export const metadata = {

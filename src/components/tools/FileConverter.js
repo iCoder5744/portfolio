@@ -1,6 +1,7 @@
 'use client'
 import { useState, useRef } from "react";
 import { Upload, Download, FileText, Image, Video, Music, Archive, RefreshCw, X, Check } from "lucide-react";
+import Link from "next/link";
 
 export default function FileConverter() {
   const [files, setFiles] = useState([]);
@@ -18,14 +19,14 @@ export default function FileConverter() {
       accept: ".pdf,.doc,.docx,.txt,.rtf,.odt,.pages,.xls,.xlsx,.ppt,.pptx,.csv"
     },
     image: {
-      name: "Images", 
+      name: "Images",
       icon: Image,
       formats: ["JPG", "PNG", "GIF", "WEBP", "BMP", "TIFF", "SVG", "ICO", "HEIC", "RAW", "PSD"],
       accept: ".jpg,.jpeg,.png,.gif,.webp,.bmp,.tiff,.svg,.ico,.heic,.raw,.psd"
     },
     video: {
       name: "Videos",
-      icon: Video, 
+      icon: Video,
       formats: ["MP4", "AVI", "MOV", "WMV", "FLV", "MKV", "WEBM", "3GP", "M4V", "ASF", "VOB"],
       accept: ".mp4,.avi,.mov,.wmv,.flv,.mkv,.webm,.3gp,.m4v,.asf,.vob"
     },
@@ -62,7 +63,7 @@ export default function FileConverter() {
     const newFiles = droppedFiles.map(file => ({
       id: Date.now() + Math.random(),
       file: file,
-      name: file.name, 
+      name: file.name,
       size: file.size,
       type: file.type,
       status: 'ready'
@@ -85,25 +86,25 @@ export default function FileConverter() {
 
   const simulateConversion = async () => {
     if (!targetFormat || files.length === 0) return;
-    
+
     setConverting(true);
-    
+
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
-      
+
       // Update status to converting
-      setFiles(prev => prev.map(f => 
+      setFiles(prev => prev.map(f =>
         f.id === file.id ? { ...f, status: 'converting' } : f
       ));
-      
+
       // Simulate conversion time
       await new Promise(resolve => setTimeout(resolve, 2000 + Math.random() * 2000));
-      
+
       // Mark as converted
-      setFiles(prev => prev.map(f => 
+      setFiles(prev => prev.map(f =>
         f.id === file.id ? { ...f, status: 'completed' } : f
       ));
-      
+
       // Add to converted files
       const convertedFile = {
         id: file.id,
@@ -112,10 +113,10 @@ export default function FileConverter() {
         format: targetFormat,
         size: file.size * (0.8 + Math.random() * 0.4) // Simulate size change
       };
-      
+
       setConverted(prev => [...prev, convertedFile]);
     }
-    
+
     setConverting(false);
   };
 
@@ -138,10 +139,17 @@ export default function FileConverter() {
 
   return (
     <div className="text-white min-h-screen px-3 sm:p-4">
+
+      {/* Back to Tool */}
+      <Link href="/tools" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
+        <span className="mr-2">←</span>
+        Back to Tools
+      </Link>
+
       <div className="max-w-4xl mx-auto mt-8">
         <h2 className="text-3xl font-bold mb-2 text-center">Universal File Converter</h2>
         <p className="text-gray-300 text-center mb-10">Convert between 200+ file formats instantly</p>
-        
+
         {/* Category Selection */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
           {Object.entries(categories).map(([key, cat]) => {
@@ -155,11 +163,10 @@ export default function FileConverter() {
                   setFiles([]);
                   setConverted([]);
                 }}
-                className={`p-4 rounded-xl border-2 transition-all ${
-                  category === key 
-                    ? 'border-blue-500 bg-blue-500/20' 
+                className={`p-4 rounded-xl border-2 transition-all ${category === key
+                    ? 'border-blue-500 bg-blue-500/20'
                     : 'border-gray-600 hover:border-gray-500'
-                }`}
+                  }`}
               >
                 <Icon className="w-8 h-8 mx-auto mb-2" />
                 <span className="text-sm font-medium">{cat.name}</span>
@@ -169,7 +176,7 @@ export default function FileConverter() {
         </div>
 
         {/* File Upload Area */}
-        <div 
+        <div
           className="border-2 border-dashed border-gray-600 rounded-xl p-8 text-center mb-6 hover:border-gray-500 transition-colors"
           onDrop={handleDrop}
           onDragOver={(e) => e.preventDefault()}
@@ -224,7 +231,7 @@ export default function FileConverter() {
                 Clear All
               </button>
             </div>
-            
+
             <div className="space-y-3">
               {files.map((file) => (
                 <div key={file.id} className="bg-gray-800 p-3 rounded-lg flex items-center justify-between">
@@ -235,7 +242,7 @@ export default function FileConverter() {
                       <p className="text-sm text-gray-400">{formatFileSize(file.size)}</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     {file.status === 'converting' && (
                       <RefreshCw className="w-5 h-5 animate-spin text-blue-400" />
@@ -259,11 +266,10 @@ export default function FileConverter() {
               <button
                 onClick={simulateConversion}
                 disabled={!targetFormat || converting}
-                className={`px-8 py-3 rounded-lg font-medium transition-colors ${
-                  !targetFormat || converting
+                className={`px-8 py-3 rounded-lg font-medium transition-colors ${!targetFormat || converting
                     ? 'bg-gray-600 cursor-not-allowed'
                     : 'bg-green-600 hover:bg-green-700'
-                }`}
+                  }`}
               >
                 {converting ? (
                   <span className="flex items-center">
@@ -294,7 +300,7 @@ export default function FileConverter() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <button
                     onClick={() => downloadFile(file)}
                     className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg flex items-center space-x-2 transition-colors"
