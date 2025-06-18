@@ -22,7 +22,7 @@ export default async function ToolPage({ params }) {
 
   return (
     <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto my-4 sm:my-8 md:my-20
-          bg-gray-700 transition-all duration-300">
+          bg-gray-800 transition-all duration-300">
       <Header />
       <div>{renderTool()}</div>
       <Contact />

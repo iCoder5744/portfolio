@@ -35,7 +35,7 @@ export default function Hero() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
-            Hello! I&apos;m <span className="text-yellow-400">Shivam Yadav</span>
+            Hello! I'm <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">Shivam Yadav</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -55,7 +55,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="flex items-center mb-4"
           >
-            <span className="text-yellow-400 font-bold mr-2">4+ Months</span>
+            <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent font-bold mr-2">4+ Months</span>
             <span>Experience</span>
           </motion.div>
 
@@ -68,14 +68,14 @@ export default function Hero() {
           >
             <a
               href="#resume"
-              className="px-6 py-1 border border-yellow-400 text-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition-all"
+              className="px-6 py-1 border border-gradient-to-r from-blue-700 to-purple-600 text-blue-700 rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-gray-300 transition-all duration-300 transform hover:scale-105 "
             >
               Resume
             </a>
             <a
-              
+
               onClick={() => scrollToSection('contact')}
-              className="px-6 py-1 bg-yellow-400 text-black rounded-full hover:bg-yellow-500 transition-all cursor-pointer"
+              className="px-6 py-1 bg-gradient-to-r from-blue-700 to-purple-600 text-gray-300 rounded-full hover:from-blue-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               Hire Me
             </a>
@@ -83,21 +83,21 @@ export default function Hero() {
 
           {/* Profile Image */}
           <div className="relative w-full max-w-xs sm:max-w-sm">
-            <div className="absolute inset-0 bg-yellow-200 rounded-full opacity-50 blur-3xl -z-10" />
+            <div className="absolute inset-0 bg-yellow-100 rounded-full opacity-50 blur-3xl -z-10" />
             <div className="relative z-10 flex justify-center">
-              <div className="relative w-64 h-64 sm:w-56 sm:h-56 rounded-full bg-yellow-400 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Image
-                    src="/images/Profile.png"
-                    width={260}
-                    height={240}
-                    alt="Shivam Yadav"
-                    className="object-cover z-10"
-                  />
-                </div>
+              <div className="relative w-64 h-64 sm:w-56 sm:h-56 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 overflow-hidden">
+                <Image
+                  src="/images/Profile.png"
+                  alt="Shivam Yadav"
+                  width={240}
+                  height={160}
+                  className="w-full h-full object-cover "
+                />
               </div>
             </div>
           </div>
+
+
 
         </div>
       </div>

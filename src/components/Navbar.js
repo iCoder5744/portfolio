@@ -35,13 +35,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={` py-3 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center  sticky top-0 z-20 transition-all duration-300`}>
+    <nav className={` py-3 px-4 md:px-6 mx-0 sm:mx-6 md:mx-12 flex justify-between items-center  sm:sticky top-0 z-20 transition-all duration-300`}>
       <Link href="/">
         <div className="flex items-center gap-2 cursor-pointer">
-          <div className="rounded-full bg-yellow-400 dark:bg-yellow-400 p-1 w-10 h-10 flex items-center justify-center">
-            <span className="text-black dark:text-black font-bold text-sm">SY</span>
+          <div className="rounded-full bg-gradient-to-r from-blue-700 to-purple-600 p-1 w-10 h-10 flex items-center justify-center">
+            <span className="text-white font-bold text-sm">SY</span>
           </div>
-          <span className="font-bold">Shivam Yadav</span>
+          <span className=" font-bold">Shivam Yadav</span>
         </div>
       </Link>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="flex items-center gap-4">
         <button
           onClick={toggleTheme}
-          className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-800 dark:text-white flex items-center justify-center cursor-pointer transition-colors duration-300"
+          className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600  flex items-center justify-center cursor-pointer transition-colors duration-300"
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
           {theme === 'dark' ? '☀️' : '🌙'}
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="px-4 py-2 rounded-md bg-yellow-400 text-black font-medium cursor-pointer transition-colors duration-300 hover:bg-yellow-500"
+          className="px-4 py-2 rounded-md bg-gradient-to-r from-blue-700 to-purple-600 text-white font-medium cursor-pointer transition-colors duration-300 hover:bg-yellow-500"
         >
           Menu
         </button>

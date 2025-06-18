@@ -40,8 +40,6 @@ export default function BlogPage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Your go-to resource for modern web development, programming tutorials, and tech insights
           </p>
-
-
         </div>
 
         {/* Featured Post */}
@@ -49,7 +47,7 @@ export default function BlogPage() {
           <div className="mb-16">
             <h2 className="text-2xl font-bold mb-6 text-center">📌 Featured Article</h2>
             <Link href={`/blog/${mainFeaturedPost.slug}`}>
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform hover:scale-105">
+              <div className="border bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform hover:scale-105">
                 <div className="text-6xl mb-4 text-center">
                   {categories.find(c => c.id === mainFeaturedPost.category)?.icon || '🎯'}
                 </div>
@@ -86,7 +84,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.posts.map((post, postIndex) => (
                     <Link key={postIndex} href={`/blog/${post.slug}`}>
-                      <article className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                      <article className="border bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-lg h-full flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="bg-blue-600 px-2 py-1 rounded text-xs font-medium">
                             {post.categoryName}
@@ -114,7 +112,7 @@ export default function BlogPage() {
                           ))}
                         </div>
                         
-                        <div className="flex justify-between items-center text-sm text-gray-400 pt-2 border-t border-gray-600">
+                        <div className="flex justify-between items-center text-sm text-gray-400 pt-2 border-t">
                           <span>{post.date}</span>
                           <span>{post.readTime}</span>
                         </div>
@@ -132,7 +130,7 @@ export default function BlogPage() {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center">
+        <div className="mt-16 border bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">📬 Stay Updated</h3>
           <p className="text-gray-100 mb-6">
             Get the latest programming tutorials and tech insights delivered to your inbox

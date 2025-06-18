@@ -31,10 +31,10 @@ export default function Header() {
           ) : (
             <Link href="/">
               <div className="flex items-center gap-2 cursor-pointer">
-                <div className="rounded-full bg-yellow-400 dark:bg-yellow-400 p-1 w-10 h-10 flex items-center justify-center">
-                  <span className="text-black font-bold max-sm:text-sm ">SY</span>
+                <div className="rounded-full bg-gradient-to-r from-blue-700 to-purple-600 p-1 w-10 h-10 flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">SY</span>
                 </div>
-                <span className="font-bold text-white max-sm:text-sm ">Shivam Yadav</span>
+                <span className="text-white font-bold">Shivam Yadav</span>
               </div>
             </Link>
           )}

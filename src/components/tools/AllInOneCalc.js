@@ -694,7 +694,7 @@ const CalculatorApp = () => {
     <div className="text-white min-h-screen px-3 sm:p-6">
 
       {/* Back to Tool */}
-      <Link href="/tools" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
+      <Link href="/tools" className="inline-flex items-center text-blue-400 hover:text-blue-300 mt-6 sm:mb-6 transition-colors">
         <span className="mr-2">←</span>
         Back to Tools
       </Link>
