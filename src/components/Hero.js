@@ -35,7 +35,7 @@ export default function Hero() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
-            Hello! I'm <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">Shivam Yadav</span>
+            {`Hello! I'm`} <span className="bg-gradient-to-r from-blue-700 to-purple-600 bg-clip-text text-transparent">Shivam Yadav</span>
           </motion.h1>
 
           {/* Subheading */}
