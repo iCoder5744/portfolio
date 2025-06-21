@@ -19,11 +19,11 @@ export default function BlogPost({ post }) {
   };
 
   return (
-    <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1200px] mx-auto my-20
+    <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto my-4 sm:my-8 md:my-20
           bg-gray-800 transition-all duration-300">
       <Header />
 
-      <div className="p-6 sm:p-10 text-white">
+      <div className="p-3 sm:p-10 text-white">
         {/* Back to Blog */}
         <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
           <span className="mr-2">←</span>
@@ -31,7 +31,7 @@ export default function BlogPost({ post }) {
         </Link>
 
         {/* Article Header */}
-        <header className="mb-8">
+        <header className="px-2 mb-8">
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="bg-blue-600 px-3 py-1 rounded-full text-sm font-medium">
               {post.categoryName}
@@ -99,7 +99,7 @@ export default function BlogPost({ post }) {
         <article className="prose prose-invert max-w-none">
           {/* Introduction */}
           <section id="section--1" className="mb-12">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-500/30">
+            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-4 sm:p-6 border border-blue-500/30">
               <h2 className="text-2xl font-bold mb-4 text-blue-300">Introduction</h2>
               <p className="text-gray-200 text-lg leading-relaxed">
                 {post.content.introduction}
@@ -110,11 +110,11 @@ export default function BlogPost({ post }) {
           {/* Content Sections */}
           {post.content.sections.map((section, index) => (
             <section key={index} id={`section-${index}`} className="mb-12">
-              <div className="bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-colors">
-                <h2 className="text-2xl font-bold mb-4 text-yellow-300">
+              <div className="bg-gray-700 rounded-xl py-4 sm:p-4 md:p-6 hover:bg-gray-600 transition-colors">
+                <h2 className="text-2xl font-bold max-sm:px-4 mb-4 text-yellow-300">
                   {index + 1}. {section.title}
                 </h2>
-                <p className="text-gray-200 mb-6 text-lg leading-relaxed">
+                <p className="text-gray-200 max-sm:px-4 mb-6 text-lg leading-relaxed">
                   {section.content}
                 </p>
                 

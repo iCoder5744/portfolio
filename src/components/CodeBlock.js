@@ -71,7 +71,7 @@ export default function CodeBlock({ code, language = 'javascript' }) {
         
         <button
           onClick={copyToClipboard}
-          className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors px-3 py-1 rounded bg-gray-700 hover:bg-gray-600"
+          className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 hover:text-white transition-colors px-3 py-1 rounded bg-gray-700 hover:bg-gray-600"
         >
           {copied ? (
             <>
@@ -88,8 +88,8 @@ export default function CodeBlock({ code, language = 'javascript' }) {
       </div>
 
       {/* Code Content */}
-      <div className="p-4 overflow-x-auto">
-        <pre className="text-sm">
+      <div className="p-2 sm:p-4 overflow-x-auto">
+        <pre className="text-xs sm:text-sm">
           <code 
             className="text-gray-100 whitespace-pre"
             dangerouslySetInnerHTML={{ 

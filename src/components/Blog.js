@@ -26,6 +26,16 @@ export default function BlogPage() {
     return acc;
   }, []);
 
+
+   const featuredPost = {
+    title: "The Complete Full-Stack Developer Roadmap 2024",
+    excerpt: "A comprehensive guide to becoming a full-stack developer in 2024. From frontend frameworks to backend technologies, databases, and deployment strategies.",
+    date: "2024-12-16",
+    readTime: "20 min read",
+    tags: ["Full-Stack", "Career", "Roadmap", "Web Development"],
+    image: "🎯"
+  };
+
   return (
     <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto my-4 sm:my-8 md:my-20
           bg-gray-800 transition-all duration-300">
@@ -42,32 +52,26 @@ export default function BlogPage() {
           </p>
         </div>
 
-        {/* Featured Post */}
-        {mainFeaturedPost && (
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold mb-6 text-center">📌 Featured Article</h2>
-            <Link href={`/blog/${mainFeaturedPost.slug}`}>
-              <div className="border bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform hover:scale-105">
-                <div className="text-6xl mb-4 text-center">
-                  {categories.find(c => c.id === mainFeaturedPost.category)?.icon || '🎯'}
-                </div>
-                <h3 className="text-2xl font-bold mb-3">{mainFeaturedPost.title}</h3>
-                <p className="text-gray-100 mb-4 leading-relaxed">{mainFeaturedPost.excerpt}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {mainFeaturedPost.tags.map((tag, index) => (
-                    <span key={index} className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-black text-sm">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-between items-center text-sm text-gray-200">
-                  <span>{mainFeaturedPost.date}</span>
-                  <span>{mainFeaturedPost.readTime}</span>
-                </div>
-              </div>
-            </Link>
+          {/* Featured Post */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 text-center">📌 Featured Article</h2>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform ">
+            <div className="text-6xl mb-4 text-center">{featuredPost.image}</div>
+            <h3 className="text-2xl font-bold mb-3">{featuredPost.title}</h3>
+            <p className="text-gray-100 mb-4 leading-relaxed">{featuredPost.excerpt}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {featuredPost.tags.map((tag, index) => (
+                <span key={index} className="bg-white bg-opacity-20 px-3 py-1 rounded-full text-black text-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="flex justify-between items-center text-sm text-gray-200">
+              <span>{featuredPost.date}</span>
+              <span>{featuredPost.readTime}</span>
+            </div>
           </div>
-        )}
+        </div>
 
         {/* Blog Categories */}
         <div className="space-y-12">
@@ -84,7 +88,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.posts.map((post, postIndex) => (
                     <Link key={postIndex} href={`/blog/${post.slug}`}>
-                      <article className="border bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                      <article className="border bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform sm:hover:scale-105 hover:shadow-lg h-full flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="bg-blue-600 px-2 py-1 rounded text-xs font-medium">
                             {post.categoryName}
