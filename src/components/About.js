@@ -28,7 +28,7 @@ export default function About() {
         <div className='p-2 sm:px-6 lg:px-10 sm:pt-6 '>
 
           {/* Discription */}
-          <p className="text-gray-200 text-md sm:text-lg mb-4 text-center font-serif">
+          <p className="text-gray-200 text-xl sm:text-2xl mb-4 text-justify font-serif">
             {"Hi, I'm Shivam Yadav — A Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products."}
           </p>
 

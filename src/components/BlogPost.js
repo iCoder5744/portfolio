@@ -23,7 +23,7 @@ export default function BlogPost({ post }) {
           bg-gray-800 transition-all duration-300">
       <Header />
 
-      <div className="p-3 sm:p-10 text-white">
+      <div className="p-3 sm:p-6 md:p-9 text-white">
         {/* Back to Blog */}
         <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
           <span className="mr-2">←</span>
@@ -43,15 +43,15 @@ export default function BlogPost({ post }) {
             ))}
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             {post.title}
           </h1>
           
-          <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+          <p className="text-md sm:text-lg text-gray-300 mb-6 leading-relaxed">
             {post.excerpt}
           </p>
           
-          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm text-gray-400">
             <span>By {post.author}</span>
             <span>•</span>
             <span>{post.date}</span>
@@ -101,7 +101,7 @@ export default function BlogPost({ post }) {
           <section id="section--1" className="mb-12">
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-4 sm:p-6 border border-blue-500/30">
               <h2 className="text-2xl font-bold mb-4 text-blue-300">Introduction</h2>
-              <p className="text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-200 text-md sm:text-lg leading-relaxed">
                 {post.content.introduction}
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function BlogPost({ post }) {
                 <h2 className="text-2xl font-bold max-sm:px-4 mb-4 text-yellow-300">
                   {index + 1}. {section.title}
                 </h2>
-                <p className="text-gray-200 max-sm:px-4 mb-6 text-lg leading-relaxed">
+                <p className="text-gray-200 max-sm:px-4 mb-6 text-md sm:text-lg leading-relaxed">
                   {section.content}
                 </p>
                 
@@ -132,9 +132,9 @@ export default function BlogPost({ post }) {
 
           {/* Conclusion */}
           <section id="section-999" className="mb-12">
-            <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-6 border border-green-500/30">
+            <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-4 sm:p-6 border border-green-500/30">
               <h2 className="text-2xl font-bold mb-4 text-green-300">Conclusion</h2>
-              <p className="text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-200 text-md sm:text-lg leading-relaxed">
                 {post.content.conclusion}
               </p>
             </div>
@@ -142,24 +142,24 @@ export default function BlogPost({ post }) {
         </article>
 
         {/* Article Actions */}
-        <div className="flex flex-wrap gap-4 justify-center mb-8">
-          <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+        <div className="flex flex-wrap gap-2 sm:gap-4 justify-around mb-8">
+          <button className="bg-blue-600 hover:bg-blue-700 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>👍</span> Helpful
           </button>
-          <button className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+          <button className="bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>🔗</span> Share
           </button>
-          <button className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+          <button className="bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>💾</span> Save
           </button>
         </div>
 
         {/* Navigation */}
         <div className="flex justify-between items-center py-8 border-t border-gray-600">
-          <Link href="/blog" className="bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg font-semibold transition-colors">
+          <Link href="/blog" className="bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors">
             ← All Posts
           </Link>
-          <Link href="/blog" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition-colors">
+          <Link href="/blog" className="bg-blue-600 hover:bg-blue-700 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors">
             More Tutorials →
           </Link>
         </div>

@@ -4,7 +4,14 @@ import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
 
+import { useTheme } from '../app/context/ThemeContext';
+
+
 export default function Header() {
+
+  const { theme, toggleTheme } = useTheme();
+
+
   const pathname = usePathname();
 
   const scrollToSection = (id) => {
@@ -34,17 +41,31 @@ export default function Header() {
                 <div className="rounded-full bg-gradient-to-r from-blue-700 to-purple-600 p-1 w-10 h-10 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">SY</span>
                 </div>
-                <span className="text-white font-bold">Shivam Yadav</span>
+                <span className="text-white font-bold max-sm:hidden">Shivam Yadav</span>
               </div>
             </Link>
           )}
         </div>
 
-        {/* Right: Blog | Tools | Game */}
-        <div className='text-gray-200 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
-          <Link href="/blog">Blog</Link>
-          <Link href="/tools">Tools</Link>
-          <Link href="/game">Game</Link>
+
+        <div className='flex items-center gap-2'> 
+
+          {/* Right: Blog | Tools | Game */}
+          <div className='text-gray-200 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
+            <Link href="/blog">Blog</Link>
+            <Link href="/tools">Tools</Link>
+            <Link href="/game">Game</Link>
+          </div>
+
+          {/* Right: Theme */}
+          <button
+            onClick={toggleTheme}
+            className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600  flex items-center justify-center cursor-pointer transition-colors duration-300"
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
+
         </div>
       </div>
     </section>

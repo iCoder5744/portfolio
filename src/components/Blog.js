@@ -88,7 +88,7 @@ export default function BlogPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.posts.map((post, postIndex) => (
                     <Link key={postIndex} href={`/blog/${post.slug}`}>
-                      <article className="border bg-gray-700 rounded-xl p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform sm:hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                      <article className="border bg-gray-700 rounded-xl p-3 sm:p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform sm:hover:scale-105 hover:shadow-lg h-full flex flex-col">
                         <div className="flex items-center gap-2 mb-3">
                           <span className="bg-blue-600 px-2 py-1 rounded text-xs font-medium">
                             {post.categoryName}
