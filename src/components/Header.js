@@ -48,7 +48,7 @@ export default function Header() {
         </div>
 
 
-        <div className='flex items-center gap-2'> 
+        <div className='flex items-center gap-2'>
 
           {/* Right: Blog | Tools | Game */}
           <div className='text-gray-200 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
@@ -57,14 +57,17 @@ export default function Header() {
             <Link href="/game">Game</Link>
           </div>
 
-          {/* Right: Theme */}
-          <button
-            onClick={toggleTheme}
-            className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600  flex items-center justify-center cursor-pointer transition-colors duration-300"
-            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-          >
-            {theme === 'dark' ? '☀️' : '🌙'}
-          </button>
+          {/* Right: Theme toggle button only for /blog, /tools, /game */}
+          {['/blog', '/tools', '/game'].includes(pathname) && (
+            <button
+              onClick={toggleTheme}
+              className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600 flex items-center justify-center cursor-pointer transition-colors duration-300"
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+          )}
+         
 
         </div>
       </div>
