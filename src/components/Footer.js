@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <section>
             {/* Top Section */}
-      <div className='flex justify-between items-center border-t border-gray-100 bg-gray-700 p-4 sm:px-14 sm:py-7 rounded-b-[2rem] sm:rounded-b-[4rem]'>
+            <div className='flex justify-between items-center border-t border-gray-100 bg-gray-700 p-4 sm:px-14 sm:py-7 '>
 
                 {/* Left: Contact Button */}
                 <div>
@@ -26,7 +26,7 @@ const Footer = () => {
                 {/* Right: Theme */}
                 <button
                     onClick={toggleTheme}
-                    className="w-16 h-8 rounded-full border border-gray-200 bg-gray-200  flex items-center justify-center cursor-pointer transition-colors duration-300"
+                    className="w-15 h-8 rounded-full border border-gray-200 bg-gray-200  flex items-center justify-center cursor-pointer transition-colors duration-300"
                     aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                 >
                     {theme === 'dark' ? '☀️' : '🌙'}
