@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <section>
       {/* Top Section */}
-      <div className='flex justify-between items-center border-b border-gray-100 bg-gray-700 p-4 sm:px-14 sm:py-7 rounded-t-[2rem] sm:rounded-t-[4rem]'>
+      <div className='flex justify-between items-center border-b border-gray-100 bg-gray-700 p-4 sm:px-14 sm:py-7 '>
 
         {/* Left: Contact or Logo based on current route */}
         <div>
@@ -46,6 +46,7 @@ export default function Header() {
             </Link>
           )}
         </div>
+        
 
 
         <div className='flex items-center gap-2'>
