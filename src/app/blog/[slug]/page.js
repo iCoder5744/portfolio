@@ -1,20 +1,21 @@
 // app/blog/[slug]/page.js
 import BlogPost from '@/components/BlogPost';
+export const dynamic = 'force-dynamic'; // 👈 Yeh line add karein
+
 import { getPostBySlug, getAllPosts } from '@/data/blog/posts';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
-  // Await params before accessing its properties
-  const { slug } = await params;
+  const { slug } = await params; // ✅ FIXED: await params
   const post = await getPostBySlug(slug);
-  
+
   if (!post) {
     return {
       title: 'Post Not Found',
@@ -28,13 +29,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  // Await params before accessing its properties
-  const { slug } = await params;
+  const { slug } = await params; // ✅ FIXED: await params
   const post = await getPostBySlug(slug);
 
-  if (!post) {
-    notFound();
-  }
+  if (!post) notFound();
 
   return <BlogPost post={post} />;
 }

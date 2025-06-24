@@ -1,0 +1,663 @@
+[
+  {
+    "id": 1,
+    "slug": "introduction-to-frontend",
+    "title": "Introduction to Frontend Development",
+    "excerpt": "Understand the basics of frontend technologies like HTML, CSS, and JavaScript.",
+    "category": "frontend",
+    "categoryName": "Frontend Development",
+    "date": "2025-01-01",
+    "readTime": "5 min read",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "author": "Web Mentor",
+    "featured": false,
+    "content": {
+      "introduction": "Frontend development focuses on how websites and apps look and behave.",
+      "sections": [
+        {
+          "title": "Core Technologies",
+          "content": "HTML, CSS, and JavaScript form the foundation...",
+          "code": "<h1>Hello World</h1>",
+          "language": "html"
+        },
+        {
+          "title": "Frameworks and Libraries",
+          "content": "React, Vue, and Angular help build dynamic UIs...",
+          "code": "const App = () => <h1>Hello</h1>;",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Frontend is user-facing and always evolving — start with the basics and build up."
+    }
+  },
+  {
+    "id": 2,
+    "slug": "css-grid-vs-flexbox",
+    "title": "CSS Grid vs Flexbox: When to Use What",
+    "excerpt": "Learn the differences and best use cases for CSS Grid and Flexbox layouts",
+    "category": "frontend",
+    "categoryName": "Frontend Development",
+    "date": "2024-12-10",
+    "readTime": "6 min read",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Design"
+    ],
+    "author": "CSS Master",
+    "featured": false,
+    "content": {
+      "introduction": "CSS Grid and Flexbox are both powerful layout systems...",
+      "sections": [
+        {
+          "title": "Flexbox: One-Dimensional Layout",
+          "content": "Flexbox is great for row or column based layouts...",
+          "code": ".container { display: flex; }",
+          "language": "css"
+        },
+        {
+          "title": "CSS Grid: Two-Dimensional Layout",
+          "content": "Grid works for rows *and* columns...",
+          "code": ".container { display: grid; }",
+          "language": "css"
+        },
+        {
+          "title": "Practical Examples",
+          "content": "Mixing both Grid and Flexbox in real-world pages...",
+          "code": "<div class='layout'>...</div>",
+          "language": "html"
+        }
+      ],
+      "conclusion": "Use Flexbox for components, Grid for page layouts — often together."
+    }
+  },
+  {
+    "id": 3,
+    "slug": "react-hooks-complete-guide",
+    "title": "React Hooks: A Complete Guide",
+    "excerpt": "Deep dive into useState, useEffect, and custom hooks with practical examples",
+    "category": "frontend",
+    "categoryName": "Frontend Development",
+    "date": "2024-12-15",
+    "readTime": "8 min read",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Hooks"
+    ],
+    "author": "Dev Expert",
+    "featured": true,
+    "content": {
+      "introduction": "React Hooks revolutionized the way we write React components...",
+      "sections": [
+        {
+          "title": "What are React Hooks?",
+          "content": "React Hooks are functions that let you use state...",
+          "code": "// Functional component example using useState...",
+          "language": "javascript"
+        },
+        {
+          "title": "useState Hook",
+          "content": "useState is the most commonly used hook...",
+          "code": "const [count, setCount] = useState(0);",
+          "language": "javascript"
+        },
+        {
+          "title": "useEffect Hook",
+          "content": "useEffect lets you perform side effects...",
+          "code": "useEffect(() => { fetchData(); }, []);",
+          "language": "javascript"
+        },
+        {
+          "title": "Custom Hooks",
+          "content": "Custom hooks allow you to extract reusable logic...",
+          "code": "function useLocalStorage(key, value) { ... }",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Hooks simplify component logic, reuse code, and enhance readability."
+    }
+  },
+  {
+    "id": 4,
+    "slug": "introduction-to-backend",
+    "title": "Introduction to Backend Development",
+    "excerpt": "Learn the basics of backend technologies like servers, databases, and APIs.",
+    "category": "backend",
+    "categoryName": "Backend Development",
+    "date": "2025-01-05",
+    "readTime": "6 min read",
+    "tags": [
+      "Backend",
+      "API",
+      "Database"
+    ],
+    "author": "Server Side",
+    "featured": false,
+    "content": {
+      "introduction": "Backend is the server-side logic of your application...",
+      "sections": [
+        {
+          "title": "What is Backend?",
+          "content": "It handles requests, databases, and server logic...",
+          "code": "GET /api/users",
+          "language": "http"
+        },
+        {
+          "title": "Common Tools",
+          "content": "Node.js, Express, MongoDB, PostgreSQL, etc...",
+          "code": "const express = require('express');",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Backend is the engine — learn how to structure logic, data, and APIs."
+    }
+  },
+  {
+    "id": 5,
+    "slug": "nodejs-performance-optimization",
+    "title": "Node.js Performance Optimization",
+    "excerpt": "Techniques to make your Node.js applications faster and more efficient",
+    "category": "backend",
+    "categoryName": "Backend Development",
+    "date": "2024-12-12",
+    "readTime": "10 min read",
+    "tags": [
+      "Node.js",
+      "Performance",
+      "Optimization"
+    ],
+    "author": "Backend Pro",
+    "featured": false,
+    "content": {
+      "introduction": "Performance optimization is crucial for Node.js apps...",
+      "sections": [
+        {
+          "title": "Asynchronous Programming Best Practices",
+          "content": "Use async/await and avoid blocking operations...",
+          "code": "const data = await Promise.all([...]);",
+          "language": "javascript"
+        },
+        {
+          "title": "Database Query Optimization",
+          "content": "Use JOINs, indexes, and reduce N+1 problems...",
+          "code": "SELECT * FROM users LEFT JOIN posts ...",
+          "language": "sql"
+        },
+        {
+          "title": "Caching and Memory",
+          "content": "Use Redis and in-memory caching where possible...",
+          "code": "cache.set(key, value);",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Measure, monitor, and optimize continuously for backend scalability."
+    }
+  },
+  {
+    "id": 6,
+    "slug": "express-routing-basics",
+    "title": "Express.js Routing Basics",
+    "excerpt": "Learn how to set up routes in an Express.js application",
+    "category": "backend",
+    "categoryName": "Backend Development",
+    "date": "2025-01-04",
+    "readTime": "5 min read",
+    "tags": [
+      "Node.js",
+      "Express"
+    ],
+    "author": "API Guru",
+    "featured": false,
+    "content": {
+      "introduction": "Routing is fundamental in building APIs with Express.js.",
+      "sections": [
+        {
+          "title": "Creating Basic Routes",
+          "content": "Use app.get(), app.post() for different endpoints...",
+          "code": "app.get('/users', (req, res) => {...});",
+          "language": "javascript"
+        },
+        {
+          "title": "Route Parameters",
+          "content": "Use `:id` to access dynamic parameters in routes...",
+          "code": "app.get('/users/:id', (req, res) => {...});",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Express routing is simple yet powerful for building scalable APIs."
+    }
+  },
+  {
+    "id": 7,
+    "slug": "introduction-to-devops",
+    "title": "Introduction to DevOps",
+    "excerpt": "Understand the basics of DevOps, CI/CD, and modern deployment practices.",
+    "category": "devops",
+    "categoryName": "DevOps & Deployment",
+    "date": "2025-01-20",
+    "readTime": "6 min read",
+    "tags": [
+      "DevOps",
+      "CI/CD",
+      "Automation"
+    ],
+    "author": "DevOps Coach",
+    "featured": false,
+    "content": {
+      "introduction": "DevOps combines development and operations to streamline software delivery and deployment.",
+      "sections": [
+        {
+          "title": "What is DevOps?",
+          "content": "DevOps focuses on collaboration, automation, and monitoring.",
+          "code": "# DevOps Tools: Jenkins, GitHub Actions, Docker, Kubernetes",
+          "language": "bash"
+        },
+        {
+          "title": "CI/CD Pipelines",
+          "content": "CI/CD ensures code is tested and deployed continuously and automatically.",
+          "code": "npm test && npm run build && npm run deploy",
+          "language": "bash"
+        }
+      ],
+      "conclusion": "DevOps improves delivery speed, reduces risk, and enhances reliability."
+    }
+  },
+  {
+    "id": 8,
+    "slug": "deploy-react-on-netlify",
+    "title": "Deploying a React App on Netlify",
+    "excerpt": "Learn how to deploy your React project on Netlify in just a few easy steps.",
+    "category": "devops",
+    "categoryName": "DevOps & Deployment",
+    "date": "2025-01-15",
+    "readTime": "6 min read",
+    "tags": [
+      "React",
+      "Netlify",
+      "Deployment"
+    ],
+    "author": "Frontend Pro",
+    "featured": false,
+    "content": {
+      "introduction": "Once you've built a React application, the next step is to share it with the world. Netlify makes it incredibly easy to deploy modern web apps with continuous deployment support.",
+      "sections": [
+        {
+          "title": "1. Build Your React App",
+          "content": "Make sure your React app is production-ready by running the build command.",
+          "code": "npm run build",
+          "language": "bash"
+        },
+        {
+          "title": "2. Push to GitHub",
+          "content": "Ensure your project is pushed to a GitHub repository. Netlify will pull directly from there."
+        },
+        {
+          "title": "3. Connect Netlify to GitHub",
+          "content": "Go to https://app.netlify.com and click 'New site from Git'. Select your GitHub repo and deploy settings.",
+          "code": "# Build command\nnpm run build\n\n# Publish directory\nbuild/",
+          "language": "bash"
+        },
+        {
+          "title": "4. Set Up Environment Variables (Optional)",
+          "content": "If your React app uses environment variables (e.g., API keys), define them in Netlify’s site settings under 'Environment variables'."
+        }
+      ],
+      "conclusion": "Netlify provides a seamless CI/CD pipeline for frontend developers. With Git integration and automatic builds, your app updates every time you push code to GitHub."
+    }
+  },
+  {
+    "id": 9,
+    "slug": "github-actions-basics",
+    "title": "Getting Started with GitHub Actions",
+    "excerpt": "Automate your workflows with GitHub Actions CI/CD pipeline.",
+    "category": "devops",
+    "categoryName": "DevOps & Deployment",
+    "date": "2025-01-18",
+    "readTime": "7 min read",
+    "tags": [
+      "CI/CD",
+      "GitHub",
+      "DevOps"
+    ],
+    "author": "Ops Expert",
+    "featured": false,
+    "content": {
+      "introduction": "GitHub Actions lets you automate tasks like builds, tests, and deployment directly from your GitHub repository.",
+      "sections": [
+        {
+          "title": "Creating Your First Workflow",
+          "content": "Create a .github/workflows/main.yml file in your repo...",
+          "code": "name: CI\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n    - uses: actions/checkout@v2\n    - name: Run tests\n      run: npm test",
+          "language": "yaml"
+        }
+      ],
+      "conclusion": "GitHub Actions makes automation easy with native GitHub integration."
+    }
+  },
+  {
+    "id": 10,
+    "slug": "introduction-to-dsa",
+    "title": "Introduction to Data Structures & Algorithms",
+    "excerpt": "A beginner’s guide to learning data structures and algorithm fundamentals.",
+    "category": "algorithms",
+    "categoryName": "Data Structures & Algorithms",
+    "date": "2025-01-25",
+    "readTime": "5 min read",
+    "tags": [
+      "DSA",
+      "Programming",
+      "Beginners"
+    ],
+    "author": "Data Mentor",
+    "featured": false,
+    "content": {
+      "introduction": "Data Structures and Algorithms (DSA) form the backbone of efficient software development. Understanding DSA helps solve complex problems easily and optimize code.",
+      "sections": [
+        {
+          "title": "Why Learn DSA?",
+          "content": "It helps write optimized and scalable code, and is a key part of technical interviews."
+        },
+        {
+          "title": "Common Data Structures",
+          "content": "Arrays, Linked Lists, Stacks, Queues, Trees, Graphs."
+        },
+        {
+          "title": "Types of Algorithms",
+          "content": "Searching, Sorting, Recursion, Dynamic Programming, and Greedy algorithms."
+        }
+      ],
+      "conclusion": "Start simple, practice daily, and gradually build confidence in problem-solving with DSA."
+    }
+  },
+  {
+    "id": 11,
+    "slug": "sorting-algorithms-guide",
+    "title": "Sorting Algorithms: Quick Overview",
+    "excerpt": "Understand popular sorting algorithms: Bubble, Merge, Quick, and Insertion sort.",
+    "category": "algorithms",
+    "categoryName": "Data Structures & Algorithms",
+    "date": "2025-01-24",
+    "readTime": "7 min read",
+    "tags": [
+      "Sorting",
+      "Algor+++++ithms",
+      "Data Structures"
+    ],
+    "author": "Code Wizard",
+    "featured": false,
+    "content": {
+      "introduction": "Sorting is essential in computer science. Let’s look at commonly used algorithms and when to use each.",
+      "sections": [
+        {
+          "title": "Merge Sort",
+          "content": "A divide-and-conquer algorithm with O(n log n) time complexity.",
+          "code": "function mergeSort(arr) {\n  if (arr.length <= 1) return arr;\n  const mid = Math.floor(arr.length / 2);\n  const left = mergeSort(arr.slice(0, mid));\n  const right = mergeSort(arr.slice(mid));\n  return merge(left, right);\n}",
+          "language": "javascript"
+        },
+        {
+          "title": "Bubble Sort",
+          "content": "Simple but slow (O(n²)); good for small datasets.",
+          "code": "for (let i = 0; i < arr.length; i++) {\n  for (let j = 0; j < arr.length - i - 1; j++) {\n    if (arr[j] > arr[j + 1]) {\n      [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];\n    }\n  }\n}",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Choose your sorting algorithm based on data size and performance requirements."
+    }
+  },
+  {
+    "id": 12,
+    "slug": "binary-search-explained",
+    "title": "Binary Search Explained with Examples",
+    "excerpt": "Learn how binary search works, with code and visual examples.",
+    "category": "algorithms",
+    "categoryName": "Data Structures & Algorithms",
+    "date": "2025-01-22",
+    "readTime": "6 min read",
+    "tags": [
+      "Algorithms",
+      "Binary Search",
+      "JavaScript"
+    ],
+    "author": "Algo Ninja",
+    "featured": false,
+    "content": {
+      "introduction": "Binary search is an efficient algorithm for finding elements in a sorted array. It divides the search space in half each time, reducing complexity to O(log n).",
+      "sections": [
+        {
+          "title": "How Binary Search Works",
+          "content": "It compares the middle element with the target and narrows the range accordingly.",
+          "code": "function binarySearch(arr, target) {\n  let left = 0, right = arr.length - 1;\n  while (left <= right) {\n    let mid = Math.floor((left + right) / 2);\n    if (arr[mid] === target) return mid;\n    else if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n  }\n  return -1;\n}",
+          "language": "javascript"
+        }
+      ],
+      "conclusion": "Binary search is fast and simple, but only works on sorted arrays. Always sort before applying it."
+    }
+  },
+  {
+    "id": 13,
+    "slug": "mobile-app-deployment-guide",
+    "title": "Deploying Mobile Apps to Play Store and App Store",
+    "excerpt": "Learn how to publish your mobile applications to both Android and iOS stores.",
+    "category": "mobile",
+    "categoryName": "Mobile Development",
+    "date": "2025-02-01",
+    "readTime": "8 min read",
+    "tags": [
+      "Deployment",
+      "App Store",
+      "Play Store"
+    ],
+    "author": "Release Manager",
+    "featured": false,
+    "content": {
+      "introduction": "Once your mobile app is ready, the next step is to publish it on the Play Store (Android) and App Store (iOS). Each platform has specific steps and guidelines.",
+      "sections": [
+        {
+          "title": "Android App Deployment",
+          "content": "Generate a signed APK or AAB, create a developer account, and upload via Google Play Console.",
+          "code": "cd android && ./gradlew bundleRelease",
+          "language": "bash"
+        },
+        {
+          "title": "iOS App Deployment",
+          "content": "Archive your app using Xcode and publish through App Store Connect."
+        },
+        {
+          "title": "App Store Guidelines",
+          "content": "Ensure your app follows each platform’s design and content policies before submission."
+        }
+      ],
+      "conclusion": "Proper deployment ensures your app reaches users smoothly and meets store requirements."
+    }
+  },
+  {
+    "id": 14,
+    "slug": "react-native-getting-started",
+    "title": "Getting Started with React Native",
+    "excerpt": "Build cross-platform mobile apps using React Native and JavaScript.",
+    "category": "mobile",
+    "categoryName": "Mobile Development",
+    "date": "2025-01-28",
+    "readTime": "7 min read",
+    "tags": [
+      "React Native",
+      "Mobile",
+      "Cross-Platform"
+    ],
+    "author": "Mobile Dev",
+    "featured": false,
+    "content": {
+      "introduction": "React Native lets you build mobile apps using only JavaScript and React. It compiles to native platform code, giving high performance on both Android and iOS.",
+      "sections": [
+        {
+          "title": "Installing React Native CLI",
+          "content": "To get started, install Node.js and the React Native CLI tool globally.",
+          "code": "npm install -g react-native-cli",
+          "language": "bash"
+        },
+        {
+          "title": "Creating a New App",
+          "content": "Use the CLI to generate a new project.",
+          "code": "npx react-native init MyFirstApp",
+          "language": "bash"
+        },
+        {
+          "title": "Running on Device/Emulator",
+          "content": "You can run the app using Android Studio emulator or a physical device.",
+          "code": "npx react-native run-android\nnpx react-native run-ios",
+          "language": "bash"
+        }
+      ],
+      "conclusion": "React Native provides a solid foundation for mobile development without needing platform-specific code."
+    }
+  },
+  {
+    "id": 15,
+    "slug": "flutter-vs-react-native",
+    "title": "Flutter vs React Native: A Developer's Perspective",
+    "excerpt": "Compare two top cross-platform mobile frameworks to find the best fit.",
+    "category": "mobile",
+    "categoryName": "Mobile Development",
+    "date": "2025-01-30",
+    "readTime": "6 min read",
+    "tags": [
+      "Flutter",
+      "React Native",
+      "Mobile"
+    ],
+    "author": "App Architect",
+    "featured": false,
+    "content": {
+      "introduction": "Flutter and React Native are popular frameworks for building mobile apps. Both offer excellent tools, but they differ in architecture, language, and ecosystem.",
+      "sections": [
+        {
+          "title": "Language Differences",
+          "content": "Flutter uses Dart, while React Native uses JavaScript.",
+          "code": "// Flutter\nText('Hello')\n\n// React Native\n<Text>Hello</Text>",
+          "language": "javascript"
+        },
+        {
+          "title": "Performance & Ecosystem",
+          "content": "Flutter offers near-native performance with rich widgets. React Native has a larger ecosystem and easier learning curve."
+        }
+      ],
+      "conclusion": "Choose Flutter for high-performance UI-heavy apps and React Native for JavaScript-based flexibility."
+    }
+  },
+  {
+    "id": 16,
+    "slug": "getting-started-with-ai",
+    "title": "Getting Started with AI & Machine Learning",
+    "excerpt": "An introduction to the world of Artificial Intelligence and Machine Learning for beginners.",
+    "category": "ai",
+    "categoryName": "AI & Machine Learning",
+    "date": "2025-02-03",
+    "readTime": "7 min read",
+    "tags": [
+      "AI",
+      "Machine Learning",
+      "Beginner"
+    ],
+    "author": "AI Explorer",
+    "featured": false,
+    "content": {
+      "introduction": "Artificial Intelligence (AI) and Machine Learning (ML) are transforming industries. If you're just starting, this guide will help you understand the basics and get hands-on quickly.",
+      "sections": [
+        {
+          "title": "What is AI?",
+          "content": "AI is the simulation of human intelligence in machines programmed to think and learn. It powers technologies like voice assistants, recommendation engines, and self-driving cars."
+        },
+        {
+          "title": "What is Machine Learning?",
+          "content": "Machine Learning is a subset of AI that enables systems to learn from data. Common ML tasks include classification, regression, and clustering."
+        },
+        {
+          "title": "Popular Tools",
+          "content": "Python, TensorFlow, Scikit-learn, PyTorch are popular tools to start ML projects.",
+          "code": "import sklearn\nfrom sklearn.linear_model import LinearRegression\n\nmodel = LinearRegression()\nmodel.fit(X_train, y_train)",
+          "language": "python"
+        }
+      ],
+      "conclusion": "Start small, learn the basics, and build simple models. Over time, you’ll develop skills to handle real-world AI problems."
+    }
+  },
+  {
+    "id": 17,
+    "slug": "build-your-first-ml-model",
+    "title": "Build Your First Machine Learning Model",
+    "excerpt": "Follow this simple guide to train your first ML model using Python and scikit-learn.",
+    "category": "ai",
+    "categoryName": "AI & Machine Learning",
+    "date": "2025-02-07",
+    "readTime": "10 min read",
+    "tags": [
+      "ML",
+      "Python",
+      "Beginners"
+    ],
+    "author": "AI Mentor",
+    "featured": false,
+    "content": {
+      "introduction": "In this beginner-friendly tutorial, you’ll build a model that predicts housing prices using scikit-learn.",
+      "sections": [
+        {
+          "title": "Step 1: Import Libraries",
+          "content": "We use pandas for data, matplotlib for visualization, and sklearn for the model.",
+          "code": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LinearRegression",
+          "language": "python"
+        },
+        {
+          "title": "Step 2: Load and Prepare Data",
+          "content": "Use a dataset like California housing. Split it into training and testing sets."
+        },
+        {
+          "title": "Step 3: Train & Evaluate",
+          "content": "Fit the model, make predictions, and measure performance using metrics like RMSE."
+        }
+      ],
+      "conclusion": "You’ve now trained a basic machine learning model! Keep practicing with different datasets to improve your skills."
+    }
+  },
+  {
+    "id": 20,
+    "slug": "top-ml-algorithms-explained",
+    "title": "Top Machine Learning Algorithms Explained",
+    "excerpt": "A simplified guide to the most used machine learning algorithms in real-world applications.",
+    "category": "ai",
+    "categoryName": "AI & Machine Learning",
+    "date": "2025-02-05",
+    "readTime": "8 min read",
+    "tags": [
+      "ML",
+      "Algorithms",
+      "AI"
+    ],
+    "author": "ML Analyst",
+    "featured": false,
+    "content": {
+      "introduction": "Machine Learning algorithms are the core of intelligent systems. Here’s an overview of the most popular algorithms with basic examples.",
+      "sections": [
+        {
+          "title": "Linear Regression",
+          "content": "Used for predicting continuous values. Fits a line through the data points.",
+          "code": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()\nmodel.fit(X, y)",
+          "language": "python"
+        },
+        {
+          "title": "Decision Trees",
+          "content": "Used for classification and regression. They split data based on feature values."
+        },
+        {
+          "title": "K-Nearest Neighbors",
+          "content": "Classifies data based on the majority label of its neighbors."
+        }
+      ],
+      "conclusion": "Mastering these core algorithms builds a solid foundation for advanced ML and AI systems."
+    }
+  }
+]

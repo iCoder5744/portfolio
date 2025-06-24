@@ -29,7 +29,7 @@ export default function About() {
 
           {/* Discription */}
           <p className="text-gray-200 text-xl sm:text-2xl mb-4 text-justify font-serif">
-            {"Hi, I'm Shivam Yadav — A Front-End Developer and BCA student at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions for real-world digital products."}
+            {"Hi, I'm Shivam Yadav — A Front-End Developer and I'm A Student of BCA at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions and contribute to impactful projects."}
           </p>
 
           {/* Education */}

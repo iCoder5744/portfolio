@@ -1,20 +1,28 @@
 // component/Blog.js
 
 'use client';
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import { useEffect, useState } from 'react';
+import { getAllPosts, categories } from '@/data/blog/posts';
+import Header from './Header';
+import Contact from './Contact';
+import Footer from './Footer';
 import Link from 'next/link';
-import { getAllPosts, categories, getFeaturedPosts } from '@/data/blog/posts';
 
 export default function BlogPage() {
-  const allPosts = getAllPosts();
-  const featuredPosts = getFeaturedPosts();
+  const [allPosts, setAllPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  // const mainFeaturedPost = featuredPosts.length > 0 ? featuredPosts[0] : null;
+  useEffect(() => {
+    async function fetchPosts() {
+      const posts = await getAllPosts();
+      setAllPosts(posts);
+      setLoading(false);
+    }
+    fetchPosts();
+  }, []);
 
-  // Get the main featured post (first one)
-  const mainFeaturedPost = featuredPosts.length > 0 ? featuredPosts[0] : null;
 
-  // Group all posts by category for display
   const groupedPosts = categories.reduce((acc, category) => {
     const categoryPosts = allPosts.filter(post => post.category === category.id);
     if (categoryPosts.length > 0) {
