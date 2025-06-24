@@ -19,7 +19,7 @@ export default function About() {
     <section id="about" className="py-16 px-2 md:px-6 lg:mx-12">
       <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
 
-      <div className="rounded-[2rem] sm:rounded-[4rem] border-4 border-gray-100 max-w-[1000px] mx-auto
+      <div className=" max-w-[1200px] mx-auto
           bg-gray-800 transition-all duration-300">
 
         {/* Header */}
