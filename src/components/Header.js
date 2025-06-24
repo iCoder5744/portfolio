@@ -12,6 +12,7 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
 
 
+
   const pathname = usePathname();
 
   const scrollToSection = (id) => {
@@ -24,7 +25,7 @@ export default function Header() {
   return (
     <section>
       {/* Top Section */}
-      <div className='flex justify-between items-center border-b border-gray-100 bg-gray-700 p-4 sm:px-14 sm:py-7 '>
+      <div className='flex justify-between items-center shadow-xl bg-black p-4 sm:px-8 md:px-12 sm:py-7 '>
 
         {/* Left: Contact or Logo based on current route */}
         <div>
@@ -46,10 +47,10 @@ export default function Header() {
             </Link>
           )}
         </div>
-        
 
 
-        <div className='flex items-center gap-2'>
+
+        <div className='flex items-center gap-x-4'>
 
           {/* Right: Blog | Tools | Game */}
           <div className='text-gray-200 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
@@ -59,7 +60,7 @@ export default function Header() {
           </div>
 
           {/* Right: Theme toggle button only for /blog, /tools, /game */}
-          {['/blog', '/tools', '/game'].includes(pathname) && (
+          {(pathname.startsWith('/blog') || pathname.startsWith('/tools') || pathname === '/game') && (
             <button
               onClick={toggleTheme}
               className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600 flex items-center justify-center cursor-pointer transition-colors duration-300"
@@ -68,7 +69,7 @@ export default function Header() {
               {theme === 'dark' ? '☀️' : '🌙'}
             </button>
           )}
-         
+
 
         </div>
       </div>
