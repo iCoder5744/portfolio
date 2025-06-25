@@ -29,10 +29,12 @@ export default function ToolsPage() {
   ];
 
   return (
-    <div className=" shadow-xl max-w-[1200px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
+    <div className=" shadow-x max-w-[1200px] border mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
           bg-black transition-all duration-300">
-      <Header />
-      <div>
+      <div className='border-b border-white'>
+        <Header />
+      </div>
+      <div className="p-2 sm:p-6 md:p-10 text-white">
         <div className="text-center mb-8">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Available Tools</h1>
 
@@ -56,7 +58,10 @@ export default function ToolsPage() {
       </div>
 
       <Contact />
-      <Footer />
+
+      <div className='border-t border-white'>
+        <Footer />
+      </div>
     </div>
   );
 }

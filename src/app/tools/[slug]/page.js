@@ -16,7 +16,7 @@ export default async function ToolPage({ params }) {
         return <FileConverter />;
       case 'all-in-one-calc':
         return <AllInOneCalc />;
-        case 'file-compressor':
+      case 'file-compressor':
         return <FileCompressor />;
       default:
         notFound(); // Call this directly, not return it
@@ -24,12 +24,16 @@ export default async function ToolPage({ params }) {
   };
 
   return (
-    <div className=" max-w-[1200px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
-          bg-black transition-all duration-300">
-      <Header />
+    <div className=" shadow-x max-w-[1200px] border mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
+              bg-black transition-all duration-300">
+      <div className='border-b border-white'>
+        <Header />
+      </div>
       <div>{renderTool()}</div>
       <Contact />
-      <Footer />
+       <div className='border-t border-white'>
+        <Footer />
+      </div>
     </div>
   );
 }

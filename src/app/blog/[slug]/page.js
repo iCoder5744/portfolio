@@ -1,5 +1,8 @@
 // app/blog/[slug]/page.js
 import BlogPost from '@/components/BlogPost';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 export const dynamic = 'force-dynamic'; // 👈 Yeh line add karein
 
 import { getPostBySlug, getAllPosts } from '@/data/blog/posts';
@@ -34,5 +37,17 @@ export default async function BlogPostPage({ params }) {
 
   if (!post) notFound();
 
-  return <BlogPost post={post} />;
+  return (
+    <div className=" shadow-x max-w-[1200px] border mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
+          bg-black transition-all duration-300">
+      <div className='border-b border-white'>
+        <Header />
+      </div>
+      <BlogPost post={post} />
+      <Contact />
+       <div className='border-t border-white'>
+        <Footer />
+      </div>
+    </div>
+  )
 }

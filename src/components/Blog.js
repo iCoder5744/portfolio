@@ -3,9 +3,6 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { getAllPosts, categories } from '@/data/blog/posts';
-import Header from './Header';
-import Contact from './Contact';
-import Footer from './Footer';
 import Link from 'next/link';
 
 export default function BlogPage() {
@@ -45,9 +42,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="shadow-xl  max-w-[1200px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
-          bg-black transition-all duration-300">
-      <Header />
+    <div >
 
       <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Hero Section */}
@@ -172,11 +167,6 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Contact */}
-      <Contact />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

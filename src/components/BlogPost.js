@@ -1,9 +1,7 @@
 // components/BlogPost.js
 'use client';
 import { useState } from 'react';
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Contact from "@/components/Contact";
+
 import CodeBlock from "@/components/CodeBlock";
 import Link from 'next/link';
 
@@ -19,11 +17,9 @@ export default function BlogPost({ post }) {
   };
 
   return (
-    <div className=" shadow-x max-w-[1200px] mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
-          bg-black transition-all duration-300">
-      <Header />
+    <div >
 
-      <div className="p-3 sm:p-6 md:p-9 md:px-12  text-white">
+      <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Back to Blog */}
         <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
           <span className="mr-2">←</span>
@@ -165,8 +161,6 @@ export default function BlogPost({ post }) {
         </div>
       </div>
 
-      <Contact />
-      <Footer />
     </div>
   );
 }

@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <section>
       {/* Top Section */}
-      <div className='flex justify-between items-center shadow-xl bg-black p-4 sm:px-8 md:px-12 sm:py-7 '>
+      <div className='flex justify-between items-center shadow-xl bg-black p-4 sm:px-8 sm:py-7 '>
 
         {/* Left: Contact or Logo based on current route */}
         <div>

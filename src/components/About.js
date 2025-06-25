@@ -19,11 +19,13 @@ export default function About() {
     <section id="about" className="py-16 px-2 md:px-6 lg:mx-12">
       <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
 
-      <div className=" max-w-[1200px] mx-auto
-          bg-gray-800 transition-all duration-300">
+      <div className=" max-w-[1200px] border mx-auto
+          bg-black transition-all duration-300">
 
         {/* Header */}
-        <Header />
+        <div className='border-b border-white'>
+          <Header />
+        </div>
 
         <div className='p-2 sm:px-6 lg:px-10 sm:pt-6 '>
 
@@ -88,8 +90,9 @@ export default function About() {
 
         </div>
 
-        {/* Footer */}
-        <Footer />
+        <div className='border-t border-white'>
+          <Footer />
+        </div>
 
       </div>
 
