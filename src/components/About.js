@@ -16,65 +16,65 @@ export default function About() {
 
 
   return (
-    <section id="about" className="py-16 px-2 md:px-6 lg:mx-12">
+    <section id="about" className="py-16 px-1 sm:px-2 md:px-6 lg:mx-12">
       <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
 
-      <div className=" max-w-[1200px] border mx-auto
+      <div className=" max-w-[1200px] shadow-xl border-2 border-white mx-auto
           bg-black transition-all duration-300">
 
         {/* Header */}
-        <div className='border-b border-white'>
-          <Header />
+        <div className='border-b border-white '>
+          <Header className="bg-transparent transition-all duration-300"/>
         </div>
 
         <div className='p-2 sm:px-6 lg:px-10 sm:pt-6 '>
 
           {/* Discription */}
-          <p className="text-gray-200 text-xl sm:text-2xl mb-4 text-justify font-serif">
+          <p className="text- text-xl sm:text-2xl mb-4 text-justify font-serif">
             {"Hi, I'm Shivam Yadav — A Front-End Developer and I'm A Student of BCA at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions and contribute to impactful projects."}
           </p>
 
           {/* Education */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl px-2 sm:px-4 py-4 border border-gray-400 shadow-lg">
+            <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
               <div className="flex justify-between items-center mb-4">
-                <div className="px-3 py-1  text-black bg-gray-200 rounded-md">
+                <div className="px-3 py-1  bg-blue-600 text-white rounded-md">
                   2023 - 2024
                 </div>
-                <div className="px-3 py-1 text-black bg-gray-200 rounded-md">
+                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
                   Intermediate
                 </div>
               </div>
-              <h4 className="text-lg font-bold mb-1 text-black not-only:">Science Stream</h4>
-              <h5 className="text-md sm:text-xl font-bold mb-4 text-black">Higher Secondary Certificate (HSC)</h5>
+              <h4 className="text-lg font-bold mb-1 text-white not-only:">Science Stream</h4>
+              <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Higher Secondary Certificate (HSC)</h5>
               <div className="flex items-center gap-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-gray-400"></div>
-                <span className='text-sm sm:text-md'>ST Joseph School</span>
+                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
+                <span className='text-sm sm:text-md text-gray-300'>ST Joseph School</span>
               </div>
               <div className="flex items-center gap-2 mt-2 text-black">
                 <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
-                <span className='text-sm sm:text-md'>Chausa Kunda, Pratapgarh, Utter Pradesh</span>
+                <span className='text-sm sm:text-md text-gray-300'>Chausa Kunda, Pratapgarh, Utter Pradesh</span>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl px-2 sm:px-4 py-4 border border-gray-400 shadow-lg">
+            <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
               <div className="flex justify-between items-center mb-4 text-black">
-                <div className="px-3 py-1 text-black bg-gray-200 rounded-md">
+                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
                   2024 - 2027
                 </div>
-                <div className="px-3 py-1 text-black bg-gray-200 rounded-md">
+                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
                   Graduation
                 </div>
               </div>
-              <h4 className="text-lg font-bold mb-1 text-black">Bachelor&apos;s Degree – BCA</h4>
-              <h5 className="text-md sm:text-xl font-bold mb-4 text-black">Bachelor of Computer Applications</h5>
+              <h4 className="text-lg font-bold mb-1 text-white">Bachelor&apos;s Degree – BCA</h4>
+              <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Bachelor of Computer Applications</h5>
               <div className="flex items-center gap-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-gray-400"></div>
-                <span className='text-sm sm:text-md'>University of Lucknow</span>
+                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
+                <span className='text-sm sm:text-md text-gray-300'>University of Lucknow</span>
               </div>
               <div className="flex items-center gap-2 mt-2 text-black">
                 <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
-                <span className='text-sm sm:text-md'>Lucknow, Utter Pradesh, India</span>
+                <span className='text-sm sm:text-md text-gray-300'>Lucknow, Utter Pradesh, India</span>
               </div>
             </div>
           </div>

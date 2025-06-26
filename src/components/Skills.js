@@ -34,10 +34,10 @@ export default function skills() {
         <section id="skills" className="">
 
             {/* Skill */}
-            <div className=" mt-4 max-w-7xl mx-auto rounded-xl px-2 sm:px-4 py-4 border border-gray-400 bg-white shadow-lg ">
+            <div className=" mt-4 max-w-7xl mx-auto rounded-xl px-2 sm:px-4 py-4 border border-white bg-gray-700 shadow-lg ">
 
                 <div className="mb-4 ">
-                    <h3 className="text-sm text-bold mb-3 px-2 py-1 text-black bg-gray-200  rounded-md w-fit">Design Tools I Use</h3>
+                    <h3 className="text-sm text-bold mb-3 px-2 py-1 bg-blue-600 text-white  rounded-md w-fit">Design Tools I Use</h3>
                     <div className="flex flex-wrap gap-2">
                         {designTools.map((tool, index) => (
                             <div key={index} className="skill-pill   shadow-xl border border-gray-200 bg-white text-black ">
@@ -48,7 +48,7 @@ export default function skills() {
                     </div>
                 </div>
                 <div className="mb-4 ">
-                    <h3 className="text-sm text-bold mb-3 px-2 py-1 text-black bg-gray-200  rounded-md w-fit">Technologies I Use</h3>
+                    <h3 className="text-sm text-bold mb-3 px-2 py-1 bg-gradient-to-r bg-blue-600 text-white rounded-md w-fit">Technologies I Use</h3>
                     <div className="flex flex-wrap gap-2">
                         {technologies.map((tech, index) => (
                             <div key={index} className="skill-pill  shadow-xl border border-gray-200 bg-white text-black ">
@@ -60,7 +60,7 @@ export default function skills() {
                 </div>
 
                 <div className="">
-                    <h3 className="text-sm text-bold mb-3 px-2 py-1 text-black bg-gray-200  rounded-md w-fit">Development & Productivity Tools I Use</h3>
+                    <h3 className="text-sm text-bold mb-3 px-2 py-1 bg-blue-600 text-white  rounded-md w-fit">Development & Productivity Tools I Use</h3>
                     <div className="flex flex-wrap gap-2">
                         {devTools.map((tool, index) => (
                             <div key={index} className="skill-pill  shadow-xl border border-gray-200 bg-white text-black">

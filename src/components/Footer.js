@@ -26,7 +26,7 @@ const Footer = () => {
                 {/* Right: Theme */}
                 <button
                     onClick={toggleTheme}
-                    className="w-15 h-8 rounded-full border border-gray-200 bg-gray-200  flex items-center justify-center cursor-pointer transition-colors duration-300"
+                    className="w-15 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600  flex items-center justify-center cursor-pointer transition-colors duration-300"
                     aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
                 >
                     {theme === 'dark' ? '☀️' : '🌙'}
