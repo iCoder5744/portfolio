@@ -92,7 +92,7 @@ export default function Hero() {
                     transition={{ delay: 0.1 }}
                   >
                     <Typography variant="h6" sx={{ color: '#a1a1aa', mb: 1 }}>
-                      Hello! I'm
+                      Hello! I&apos;m
                     </Typography>
                     <Typography
                       variant="h2"
