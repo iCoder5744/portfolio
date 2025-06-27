@@ -3,7 +3,6 @@
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
-import Header from './Header';
 import Footer from './Footer';
 
 export default function About() {
@@ -16,84 +15,78 @@ export default function About() {
 
 
   return (
-    <section id="about" className="py-16 px-1 sm:px-2 md:px-6 lg:mx-12">
-      <h2 className="text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
+    <section id="about" className="pt-12 bg-[#0f0f23] ">
 
-      <div className=" max-w-[1200px] shadow-xl border-2 border-white mx-auto
-          bg-black transition-all duration-300">
+      <div className=" max-w-[1200px] shadow-xl  mx-auto p-2 sm:px-6 lg:px-14 sm:pt-6
+          bg-transparent transition-all duration-300 ">
 
-        {/* Header */}
-        <div className='border-b border-white '>
-          <Header className="bg-transparent transition-all duration-300"/>
-        </div>
-
-        <div className='p-2 sm:px-6 lg:px-10 sm:pt-6 '>
+        <div className='mb-8 sm:mb-12'>
+          <h2 className="text-xl sm:text-2xl mb-8  text-center items-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
 
           {/* Discription */}
-          <p className="text- text-xl sm:text-2xl mb-4 text-justify font-serif">
+          <p className="text-gray-300 text-md sm:text-xl mb-4 text-center  items-center font-serif">
             {"Hi, I'm Shivam Yadav — A Front-End Developer and I'm A Student of BCA at the University of Lucknow. I build responsive, user-friendly web apps using modern tools like React, Next.js, Tailwind CSS. I'm currently expanding into full-stack development and working on blog projects to enhance my skills. My goal is to create clean, effective solutions and contribute to impactful projects."}
           </p>
+        </div>
 
-          {/* Education */}
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
-              <div className="flex justify-between items-center mb-4">
-                <div className="px-3 py-1  bg-blue-600 text-white rounded-md">
-                  2023 - 2024
-                </div>
-                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
-                  Intermediate
-                </div>
+        {/* Education */}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
+            <div className="flex justify-between items-center mb-4">
+              <div className="px-3 py-1  bg-blue-500 text-white rounded-md">
+                2023 - 2024
               </div>
-              <h4 className="text-lg font-bold mb-1 text-white not-only:">Science Stream</h4>
-              <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Higher Secondary Certificate (HSC)</h5>
-              <div className="flex items-center gap-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
-                <span className='text-sm sm:text-md text-gray-300'>ST Joseph School</span>
-              </div>
-              <div className="flex items-center gap-2 mt-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
-                <span className='text-sm sm:text-md text-gray-300'>Chausa Kunda, Pratapgarh, Utter Pradesh</span>
+              <div className="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Intermediate
               </div>
             </div>
-
-            <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
-              <div className="flex justify-between items-center mb-4 text-black">
-                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
-                  2024 - 2027
-                </div>
-                <div className="px-3 py-1 bg-blue-600 text-white rounded-md">
-                  Graduation
-                </div>
-              </div>
-              <h4 className="text-lg font-bold mb-1 text-white">Bachelor&apos;s Degree – BCA</h4>
-              <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Bachelor of Computer Applications</h5>
-              <div className="flex items-center gap-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
-                <span className='text-sm sm:text-md text-gray-300'>University of Lucknow</span>
-              </div>
-              <div className="flex items-center gap-2 mt-2 text-black">
-                <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
-                <span className='text-sm sm:text-md text-gray-300'>Lucknow, Utter Pradesh, India</span>
-              </div>
+            <h4 className="text-lg font-bold mb-1 text-white not-only:">Science Stream</h4>
+            <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Higher Secondary Certificate (HSC)</h5>
+            <div className="flex items-center gap-2 text-black">
+              <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
+              <span className='text-sm sm:text-md text-gray-300'>ST Joseph School</span>
+            </div>
+            <div className="flex items-center gap-2 mt-2 text-black">
+              <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
+              <span className='text-sm sm:text-md text-gray-300'>Chausa Kunda, Pratapgarh, Utter Pradesh</span>
             </div>
           </div>
 
-          {/* Skill */}
-          <Skills />
-
-          {/* Project */}
-          <Projects />
-
-          {/* Contact */}
-          <Contact />
-
+          <div className="bg-gray-700 rounded-xl px-2 sm:px-4 py-4 border border-white shadow-lg">
+            <div className="flex justify-between items-center mb-4 text-black">
+              <div className="px-3 py-1 bg-blue-500 text-white rounded-md">
+                2024 - 2027
+              </div>
+              <div className="px-3 py-1 bg-blue-500 text-white rounded-md">
+                Graduation
+              </div>
+            </div>
+            <h4 className="text-lg font-bold mb-1 text-white">Bachelor&apos;s Degree – BCA</h4>
+            <h5 className="text-md sm:text-xl font-bold mb-4 text-white">Bachelor of Computer Applications</h5>
+            <div className="flex items-center gap-2 text-black">
+              <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-700 to-purple-600"></div>
+              <span className='text-sm sm:text-md text-gray-300'>University of Lucknow</span>
+            </div>
+            <div className="flex items-center gap-2 mt-2 text-black">
+              <div className="w-4 h-4 rounded-full bg-yellow-400"></div>
+              <span className='text-sm sm:text-md text-gray-300'>Lucknow, Utter Pradesh, India</span>
+            </div>
+          </div>
         </div>
 
-        <div className='border-t border-white'>
-          <Footer />
-        </div>
+        {/* Skill */}
+        <Skills />
 
+        {/* Project */}
+        <Projects />
+
+        {/* Contact */}
+        <Contact />
+
+
+      </div>
+      <div className='border-t border-white'>
+        <Footer />
       </div>
 
     </section>

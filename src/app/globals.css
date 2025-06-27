@@ -15,8 +15,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(var(--background-rgb)) ;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 @layer components {

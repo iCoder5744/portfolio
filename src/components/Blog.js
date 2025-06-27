@@ -42,7 +42,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div >
+    <div  >
 
       <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Hero Section */}

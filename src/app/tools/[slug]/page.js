@@ -24,8 +24,8 @@ export default async function ToolPage({ params }) {
   };
 
   return (
-    <div className=" shadow-x max-w-[1200px] border mx-2 sm:mx-4 md:mx-6 lg:mx-auto 
-              bg-black transition-all duration-300">
+    <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
+              bg-[#0f0f23] transition-all duration-300">
       <div className='border-b border-white'>
         <Header />
       </div>

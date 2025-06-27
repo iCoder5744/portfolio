@@ -19,7 +19,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className=" mt-20 px-0 sm:px-4 md:px-8">
+    <section id="contact" className=" mt-20 px-4 sm:px-6 md:px-8">
       <div className=" border-t  pt-8 pb-2 max-w-3xl mx-auto border-gray-300 ">
 
         <div className='flex flex-col text-center px-3 gap-y-6 mb-10 '>

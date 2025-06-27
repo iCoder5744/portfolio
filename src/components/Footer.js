@@ -16,7 +16,8 @@ const Footer = () => {
     return (
         <section>
             {/* Top Section */}
-            <div className='flex justify-between items-center bg-black p-4 sm:px-14 sm:py-7 '>
+            <div className='flex justify-between items-center p-4 sm:px-14 sm:py-7 bg-[#0f0f23]'
+            >
 
                 {/* Left: Contact Button */}
                 <div>

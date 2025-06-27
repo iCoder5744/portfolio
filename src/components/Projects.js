@@ -59,7 +59,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="project-card px-2 sm:px-4 py-4 my-6 border border-gray-400 bg-white shadow-lg"
+      className="project-card px-2 sm:px-4 py-4 my-6 rounded-xl border border-gray-400 bg-white shadow-lg"
     >
 
       <div className='text-center'>
