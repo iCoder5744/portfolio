@@ -49,16 +49,16 @@ export default function Navbar() {
           <div className="rounded-full bg-gradient-to-r from-blue-700 to-purple-600 p-1 w-10 h-10 flex items-center justify-center">
             <span className="text-white font-bold text-sm">SY</span>
           </div>
-          <span className="text-white font-bold">Shivam Yadav</span>
+          <span className="text-white font-bold max-sm:hidden">Shivam Yadav</span>
         </div>
       </Link>
 
 
       <div className="flex items-center gap-4">
-        <div className='flex items-center gap-x-4 max-md:hidden '>
+        <div className='flex items-center gap-x-4 md:gap-x-8  '>
 
           {/* Right: Blog | Tools | Game */}
-          <div className=' text-gray-200 flex gap-3 sm:gap-6 max-sm:text-sm font-medium'>
+          <div className=' text-gray-200 flex gap-3 sm:gap-6 md:gap-10 max-sm:text-sm font-medium'>
             <Link href="/blog">Blog</Link>
             <Link href="/tools">Tools</Link>
             <Link href="/game">Game</Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
           {(pathname.startsWith('/') || pathname.startsWith('/blog') || pathname.startsWith('/tools') || pathname === '/game') && (
             <button
               onClick={toggleTheme}
-              className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600 flex items-center justify-center cursor-pointer transition-colors duration-300"
+              className=" w-8 h-8 rounded-full bg-gradient-to-r from-blue-700 to-purple-600 flex items-center justify-center cursor-pointer transition-colors duration-300"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
               {theme === 'dark' ? '☀️' : '🌙'}
@@ -78,15 +78,15 @@ export default function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden px-4 py-2 rounded-md bg-gradient-to-r from-blue-700 to-purple-600 text-white font-medium cursor-pointer transition-colors duration-300 hover:bg-yellow-500"
+          className="hidden px-4 py-2 rounded-md bg-gradient-to-r from-blue-700 to-purple-600 text-white font-medium cursor-pointer transition-colors duration-300 hover:bg-yellow-500"
         >
           Menu
         </button>
       </div>
 
       {/* Menu Drawer */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-50  style={{
+      {/* {menuOpen && (
+        <div className="fixed inset-0 z-50   style={{
     background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
   }}" onClick={() => setMenuOpen(false)}>
           <div
@@ -139,7 +139,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </nav>
   );
 }

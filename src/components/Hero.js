@@ -1,16 +1,6 @@
 'use client';
 
 import React from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  Button,
-  Grid,
-  Avatar,
-  Fab,
-} from '@mui/material';
-import { Download, Work } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Navbar from './Navbar';
@@ -24,66 +14,34 @@ export default function Hero() {
   };
 
   return (
-    <Box sx={{ minHeight: '100vh', overflow: 'hidden' }}>
+    <div className="min-h-screen overflow-hidden bg-[#0f0f23]">
+      {/* Navbar would go here */}
       <Navbar />
 
       {/* Hero Section */}
-      <Box
+      <section
         id="home"
-        sx={{
-          minHeight: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          background: '#0f0f23',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
+        className="min-h-screen flex items-center relative overflow-hidden"
       >
         {/* Animated Background Elements */}
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '20%',
-            right: '10%',
-            width: { xs: '150px', md: '200px' },
-            height: { xs: '150px', md: '200px' },
-            borderRadius: '50%',
-            background: 'linear-gradient(45deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3))',
-            filter: 'blur(100px)',
-            animation: 'float 6s ease-in-out infinite',
-          }}
-        />
-        <Box
-          sx={{
-            position: 'absolute',
-            bottom: '20%',
-            left: '10%',
-            width: { xs: '120px', md: '150px' },
-            height: { xs: '120px', md: '150px' },
-            borderRadius: '50%',
-            background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(99, 102, 241, 0.3))',
-            filter: 'blur(80px)',
-            animation: 'float 8s ease-in-out infinite reverse',
-          }}
-        />
+      
 
-        <Container maxWidth="lg" sx={{ pt: { xs: 12, md: 10 }, position: 'relative', zIndex: 1 }}>
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={6}>
+        <div className="container mx-auto px-4 pt-0 sm:pt-8 md:pt-10 relative z-10">
+          <div className="flex flex-col md:flex-row items-center  justify-between gap-4">
+            {/* Text Content - order changes on mobile */}
+            <div className=" w-full md:w-1/2 order-1 flex flex-col justify-center md:justify-start max-md:items-center max-md:text-center md:ml-5">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <Box sx={{ mb: 2 }}>
+                <div className="mb-5 md:mb-8">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mb-4"
+                    className="mb-2 md:mb-4"
                   >
-                    <Typography variant="h4" sx={{ mb: 2, fontSize: { xs: '2rem', md: '3rem' } }}>
-                      👋
-                    </Typography>
+                    <h1 className="text-2xl md:text-4xl lg:text-6xl mb-2 sm:mb-4">👋</h1>
                   </motion.div>
 
                   <motion.div
@@ -91,23 +49,10 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                   >
-                    <Typography variant="h6" sx={{ color: '#a1a1aa', mb: 1 }}>
-                      Hello! I&apos;m
-                    </Typography>
-                    <Typography
-                      variant="h2"
-                      component="h1"
-                      sx={{
-                        fontWeight: 'bold',
-                        fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
-                        background: 'linear-gradient(45deg, #6366f1, #8b5cf6)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        mb: 2,
-                      }}
-                    >
+                    <h2 className="text-xl text-[#a1a1aa] sm:mb-2">Hello! I'm</h2>
+                    <h1 className="font-bold text-5xl md:text-5xl lg:text-6xl mb-4 bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
                       Shivam Yadav
-                    </Typography>
+                    </h1>
                   </motion.div>
 
                   <motion.div
@@ -115,16 +60,9 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        color: '#a1a1aa',
-                        mb: 3,
-                        fontSize: { xs: '1.25rem', md: '1.5rem' },
-                      }}
-                    >
+                    <h3 className=" text-md sm:text-xl md:text-2xl text-[#a1a1aa] mb-2">
                       A Front End Developer | Web Designer
-                    </Typography>
+                    </h3>
                   </motion.div>
 
                   <motion.div
@@ -132,147 +70,96 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                   >
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          background: 'linear-gradient(45deg, #6366f1, #8b5cf6)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          fontWeight: 'bold',
-                          mr: 1,
-                        }}
-                      >
+                    <div className="flex max-md:justify-center  mb-2">
+                      <span className=" text-sm sm:text-xl font-bold bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent mr-2">
                         4+ Months
-                      </Typography>
-                      <Typography variant="h6" sx={{ color: 'white' }}>Experience</Typography>
-                    </Box>
+                      </span>
+                      <span className="text-sm sm:text-xl text-white">Experience</span>
+                    </div>
                   </motion.div>
-                </Box>
+                </div>
 
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 4 }}>
-                    <Button
-                      variant="outlined"
-                      size="large"
-                      startIcon={<Download />}
-                      href="#resume"
-                      sx={{
-                        borderColor: '#6366f1',
-                        color: '#6366f1',
-                        borderRadius: '25px',
-                        px: 3,
-                        py: 1,
-                        textTransform: 'none',
-                        fontWeight: 600,
-                        border: '2px solid',
-                        borderImage: 'linear-gradient(45deg, #6366f1, #8b5cf6) 1',
-                        '&:hover': {
-                          background: 'linear-gradient(45deg, #6366f1, #8b5cf6)',
-                          borderColor: 'transparent',
-                          color: 'white',
-                          transform: 'scale(1.05)',
-                        },
-                        transition: 'all 0.3s ease',
-                      }}
+                  <div className="flex gap-2 sm:gap-4 flex-wrap mb-8 max-md:justify-center">
+                    <button
+                      onClick={() => scrollToSection('resume')}
+                      className="flex items-center px-4 sm:px-6 py-1 sm:py-2 rounded-full border border-[#6366f1] text-[#6366f1] font-semibold hover:bg-gradient-to-r hover:from-[#6366f1] hover:to-[#8b5cf6] hover:text-white hover:border-transparent transition-all duration-300 hover:scale-105"
                     >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
                       Resume
-                    </Button>
-                    <Button
-                      variant="contained"
-                      size="large"
-                      sx={{
-                        background: 'linear-gradient(45deg, #6366f1, #8b5cf6)',
-                        borderRadius: '25px',
-                        px: 3,
-                        py: 1,
-                        textTransform: 'none',
-                        fontWeight: 600,
-                        '&:hover': {
-                          background: 'linear-gradient(45deg, #4f46e5, #7c3aed)',
-                          transform: 'scale(1.05)',
-                        },
-                        transition: 'all 0.3s ease',
-                      }}
+                    </button>
+                    <button
                       onClick={() => scrollToSection('contact')}
+                      className="px-6 sm:px-6 py-0 sm:py-2 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white font-md md:font-semibold hover:from-[#4f46e5] hover:to-[#7c3aed] transition-all duration-300 hover:scale-105"
                     >
                       Hire Me
-                    </Button>
-                  </Box>
+                    </button>
+                  </div>
                 </motion.div>
               </motion.div>
-            </Grid>
+            </div>
 
-            <Grid item xs={12} md={6}>
+            {/* Image Content - order changes on mobile */}
+            <div className="w-full md:w-1/2 order-2 flex justify-center md:justify-start items-start md:items-center mb-8 md:mb-0 ">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <Box sx={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
+                <div className="relative flex justify-center w-full">
                   {/* Glowing background */}
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      inset: 0,
-                      background: 'radial-gradient(circle, rgba(255, 235, 59, 0.3) 0%, transparent 70%)',
-                      borderRadius: '50%',
-                      filter: 'blur(60px)',
-                      zIndex: -1,
-                    }}
-                  />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,235,59,0.3)_0%,transparent_70%)] rounded-full blur-[60px] -z-10"></div>
 
-                  <Box
-                    sx={{
-                      width: { xs: 250, sm: 280, md: 320 },
-                      height: { xs: 250, sm: 280, md: 320 },
-                      borderRadius: '50%',
-                      background: 'linear-gradient(45deg, #6366f1, #8b5cf6)',
-                      p: 0.5,
-                      animation: 'pulse 2s infinite',
-                      position: 'relative',
-                      overflow: 'hidden',
-                    }}
-                  >
-                    <Box
-                      sx={{
-                        width: '100%',
-                        height: '100%',
-                        borderRadius: '50%',
-                        overflow: 'hidden',
-                        position: 'relative',
-                      }}
-                    >
+                  <div className="w-54 h-54 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] p-1.5 animate-pulse relative overflow-hidden">
+                    <div className="w-full h-full rounded-full overflow-hidden relative">
                       <Image
                         src="/images/Profile.png"
                         alt="Shivam Yadav"
                         fill
-                        style={{ objectFit: 'cover' }}
+                        className="object-cover"
                         priority
                       />
-                    </Box>
-                  </Box>
-                </Box>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
-            </Grid>
-          </Grid>
-        </Container>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <style jsx>{`
-          @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-          }
-          @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-          }
-        `}</style>
-      </Box>
-    </Box>
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        @keyframes float-reverse {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(20px); }
+        }
+        @keyframes pulse {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.05); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-reverse {
+          animation: float-reverse 8s ease-in-out infinite;
+        }
+        .animate-pulse {
+          animation: pulse 2s infinite;
+        }
+        .border-gradient {
+          border-image-slice: 1;
+        }
+      `}</style>
+    </div>
   );
 }
