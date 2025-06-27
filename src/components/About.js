@@ -4,6 +4,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import FloatingBackground from './FloatingBackground';
 
 export default function About() {
   const scrollToSection = (id) => {
@@ -15,10 +16,13 @@ export default function About() {
 
 
   return (
-    <section id="about" className="pt-12 bg-[#0f0f23] ">
+    <section id="about" className="pt-12 bg-[#0f0f23] relative overflow-hidden">
 
-      <div className=" max-w-[1200px] shadow-xl  mx-auto p-2 sm:px-6 lg:px-14 sm:pt-6
-          bg-transparent transition-all duration-300 ">
+      {/* Animated Background Elements */}
+      <FloatingBackground />
+
+      <div className="jsx-be7a05a46dd73081 max-w-[1200px] shadow-xl mx-auto p-2 sm:px-6 lg:px-14 sm:pt-6 bg-transparent transition-all duration-300 relative z-10">
+
 
         <div className='mb-8 sm:mb-12'>
           <h2 className="text-xl sm:text-2xl mb-8  text-center items-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">About Me</h2>
@@ -88,6 +92,7 @@ export default function About() {
       <div className='border-t border-white'>
         <Footer />
       </div>
+
 
     </section>
   );

@@ -1,6 +1,7 @@
 // app/blog/[slug]/page.js
 import BlogPost from '@/components/BlogPost';
 import Contact from '@/components/Contact';
+import FloatingBackground from '@/components/FloatingBackground';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 export const dynamic = 'force-dynamic'; // 👈 Yeh line add karein
@@ -39,13 +40,15 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
-          bg-[#0f0f23] transition-all duration-300">
+          bg-transparent transition-all duration-300">
+      <FloatingBackground />
+
       <div className='border-b border-white'>
         <Header />
       </div>
       <BlogPost post={post} />
       <Contact />
-       <div className='border-t border-white'>
+      <div className='border-t border-white'>
         <Footer />
       </div>
     </div>

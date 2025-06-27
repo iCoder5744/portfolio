@@ -1,6 +1,7 @@
 // app/blog/page.js 
 import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
+import FloatingBackground from '@/components/FloatingBackground';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
@@ -11,8 +12,10 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
-          bg-[#0f0f23] transition-all duration-300">
+    <div className="jsx-be7a05a46dd73081 shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto bg-transparent transition-all duration-300">
+
+      <FloatingBackground />
+
       <div className='border-b border-white'>
         <Header />
       </div>
@@ -21,6 +24,7 @@ export default function BlogPage() {
       <div className='border-t border-white'>
         <Footer />
       </div>
+
     </div>
   )
 }

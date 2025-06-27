@@ -5,6 +5,7 @@ import AllInOneCalc from "@/components/tools/AllInOneCalc";
 import FileCompressor from "@/components/tools/FileCompressor";
 import { notFound } from 'next/navigation';
 import Contact from "@/components/Contact";
+import FloatingBackground from "@/components/FloatingBackground";
 
 export default async function ToolPage({ params }) {
   // Await the params before accessing its properties
@@ -25,13 +26,15 @@ export default async function ToolPage({ params }) {
 
   return (
     <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
-              bg-[#0f0f23] transition-all duration-300">
+              bg-transparent transition-all duration-300">
+      <FloatingBackground />
+
       <div className='border-b border-white'>
         <Header />
       </div>
       <div>{renderTool()}</div>
       <Contact />
-       <div className='border-t border-white'>
+      <div className='border-t border-white'>
         <Footer />
       </div>
     </div>
