@@ -5,7 +5,7 @@ export default function FloatingBackground() {
   return (
     <>
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+<div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-500 rounded-full animate-float opacity-40"></div>
         <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400 rounded-full animate-float-reverse opacity-50"></div>

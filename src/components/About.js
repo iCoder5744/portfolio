@@ -21,7 +21,7 @@ export default function About() {
       {/* Animated Background Elements */}
       <FloatingBackground />
 
-      <div className="jsx-be7a05a46dd73081 max-w-[1200px] shadow-xl mx-auto p-2 sm:px-6 lg:px-14 sm:pt-6 bg-transparent transition-all duration-300 relative z-10">
+      <div className="jsx-be7a05a46dd73081 max-w-[1200px] shadow-xl mx-auto p-2 sm:px-6 lg:px-14  bg-transparent transition-all duration-300 relative z-10">
 
 
         <div className='mb-8 sm:mb-12'>

@@ -49,7 +49,7 @@ export default function Navbar() {
           <div className="rounded-full bg-gradient-to-r from-blue-700 to-purple-600 p-1 w-10 h-10 flex items-center justify-center">
             <span className="text-white font-bold text-sm">SY</span>
           </div>
-          <span className="text-white font-bold sm:hidden">Shivam Yadav</span>
+          <span className="text-white font-bold ">Shivam Yadav</span>
         </div>
       </Link>
 

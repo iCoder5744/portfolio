@@ -31,9 +31,9 @@ export default function ToolsPage() {
 
   return (
     <section>
-      <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
+      <div className="relative min-h-screen shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
           bg-transparent transition-all duration-300">
-            <FloatingBackground />
+        <FloatingBackground />
 
 
         <div className='border-b border-white'>
@@ -48,12 +48,15 @@ export default function ToolsPage() {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 px-4 lg:px-14 pb-12  ">
             {tools.map((tool) => (
-              <div key={tool.slug} className="border rounded-xl p-6 lg:m-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-                <h2 className="text-xl font-semibold">{tool.title}</h2>
-                <p className="mt-2 mb-4 text-sm">{tool.description}</p>
+              <div key={tool.slug} className="border border-blue-600 rounded-xl p-6 lg:m-6 bg-gray-700 text-white">
+                <div className="inline-block rounded-md bg-blue-600 px-2 py-1">
+                  <h2 className="text-md font-semibold text-white">{tool.title}</h2>
+                </div>
+
+                <p className="mt-2 mb-4 text-sm text-gray-300">{tool.description}</p>
                 <Link
                   href={`/tools/${tool.slug}`}
-                  className="inline-block border px-4 py-2 rounded hover:bg-white hover:text-black transition"
+                  className="inline-block border border-blue-600 px-4 py-2 rounded hover:bg-white hover:text-black transition"
                 >
                   Visit →
                 </Link>

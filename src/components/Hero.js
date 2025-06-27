@@ -70,9 +70,9 @@ export default function Hero() {
         </div>
 
         <div className="py-3 px-4 sm:px-6 md:px-10 lg:px-16 mx-auto w-full pt-0 sm:pt-8 md:pt-10 relative z-10">
-          <div className="flex flex-col md:flex-row items-start justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Text Content - order changes on mobile */}
-            <div className="w-full md:w-1/2 order-1 flex flex-col justify-center md:justify-start max-md:items-center md:items-start max-md:text-center md:ml-5">
+            <div className="  w-full md:w-1/2 order-1 flex flex-col justify-center md:justify-start max-md:items-center md:items-start max-md:text-center md:ml-5">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-2 md:mb-4"
                   >
-                    <h1 className="text-2xl md:text-4xl mb-2 sm:mb-4">👋</h1>
+                    <h1 className="text-2xl md:text-5xl mb-2 sm:mb-6">👋</h1>
                   </motion.div>
 
                   <motion.div
@@ -92,7 +92,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                   >
-                    <h2 className="text-xl text-[#a1a1aa] sm:mb-2">Hello! I&apos;m</h2>
+                    <h2 className="text-xl text-[#a1a1aa] sm:mb-4">Hello! I&apos;m</h2>
                     <h1 className="font-bold text-5xl md:text-5xl lg:text-6xl mb-4 bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] bg-clip-text text-transparent">
                       Shivam Yadav
                     </h1>
@@ -103,7 +103,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    <h3 className="text-md sm:text-xl md:text-2xl text-[#a1a1aa] mb-2">
+                    <h3 className="text-md sm:text-lg md:text-2xl text-[#a1a1aa] mb-2 sm:mb-4">
                       A Front End Developer | Web Designer
                     </h3>
                   </motion.div>
@@ -149,7 +149,7 @@ export default function Hero() {
             </div>
 
             {/* Image Content - order changes on mobile */}
-            <div className="w-full md:w-1/2 order-2 flex justify-center md:justify-start items-start md:items-center mb-8 md:mb-0">
+            <div className=" w-full md:w-1/2 order-2 flex justify-center md:justify-start items-start md:items-center mb-8 md:mb-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}

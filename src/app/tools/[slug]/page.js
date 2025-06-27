@@ -25,7 +25,7 @@ export default async function ToolPage({ params }) {
   };
 
   return (
-    <div className=" shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
+    <div className="relative min-h-screen shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto 
               bg-transparent transition-all duration-300">
       <FloatingBackground />
 

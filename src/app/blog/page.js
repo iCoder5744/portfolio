@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="jsx-be7a05a46dd73081 shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto bg-transparent transition-all duration-300">
+    <div className="relative min-h-screen shadow-x max-w-[1200px] border border-white mx-0 sm:mx-4 md:mx-6 lg:mx-auto bg-transparent transition-all duration-300">
 
       <FloatingBackground />
 
