@@ -46,7 +46,7 @@ export default function Projects() {
       name: 'Working',
       displayName: 'Game-Application',
       type: ['Personal Website'],
-      technologies: ['Next.js', , 'ReactJS', 'Tailwind CSS', 'Firebox', 'Material UI'],
+      technologies: ['Next.js', 'ReactJS', 'Tailwind CSS', 'Firebox', 'Material UI'],
       image: '/images/game.png',
       favicon: '/images/game-favicon.png',
       color: 'bg-blue-700',
@@ -57,33 +57,28 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(projects[0]);
 
   return (
-    <section
-      id="projects"
-      className="project-card px-2 sm:px-4 py-4 my-6 rounded-xl border border-gray-400 bg-white shadow-lg"
-    >
-
-      <div className='text-center'>
-        <h1 className='text-2xl text-black font-bold mb-6 font-serif'>Discover how I work</h1>
+    <section id="projects" className="project-card px-2 sm:px-4 py-4 my-6 rounded-xl border border-gray-400 bg-white shadow-lg">
+      <div className="text-center">
+        <h1 className="text-2xl text-black font-bold mb-6 font-serif">Discover how I work</h1>
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-6">
-          {/* Left side buttons */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:flex md:flex-col  gap-4 my-auto w-full md:w-1/5">
+
+          {/* Left Side: Project Buttons */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:flex md:flex-col gap-4 my-auto w-full md:w-1/5">
             {projects.map((project) => (
               <button
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className={`w-full px-3 py-2 rounded-md text-white font-semibold transition duration-200 cursor-pointer
-                ${project.color}`}
+                className={`w-full px-3 py-2 rounded-md text-white font-semibold transition duration-200 cursor-pointer ${project.color}`}
               >
                 {project.name}
               </button>
             ))}
           </div>
 
-
-
-          {/* Right side selected project details */}
+          {/* Right Side: Project Details */}
           <div className={`project-card w-full md:w-4/5 max-sm:h-[450px] px-2 py-4 sm:p-6 text-white ${selectedProject.color} dark:bg-gray-800`}>
-            <div className="flex flex-col md:flex-row gap-4 ">
+            <div className="flex flex-col md:flex-row gap-4">
+
               {/* Image Section */}
               <div className="mb-4 md:mb-0 md:w-1/2">
                 <div className="max-sm:h-[200px] max-lg:h-[250px] h-[230px] w-full rounded-xl overflow-hidden bg-white bg-opacity-20">
@@ -92,15 +87,12 @@ export default function Projects() {
                     alt={selectedProject.name}
                     width={500}
                     height={400}
-                    className={`w-full h-full ${selectedProject.id === 1
-                        ? 'object-cover'
-                        : 'max-sm:fill-contain sm:object-cover lg:object-fill'
-                      }`}
+                    className={`w-full h-full ${selectedProject.id === 1 ? 'object-cover' : 'max-sm:fill-contain sm:object-cover lg:object-fill'}`}
                   />
                 </div>
               </div>
 
-              {/* Details Section */}
+              {/* Info Section */}
               <div className="md:w-1/2 pl-0 md:pl-3">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="text-xl sm:text-2xl font-bold">{selectedProject.displayName}</h3>
@@ -115,12 +107,13 @@ export default function Projects() {
                   </div>
                 </div>
 
+                {/* Tech Stack */}
                 <div className="mb-4 sm:mb-6">
                   <p className="text-start font-medium mb-2 text-gray-200">Technologies used</p>
                   <div className="flex flex-wrap gap-x-5 gap-y-2 text-gray-100">
-                    {selectedProject.technologies.map((tech, index) => (
+                    {selectedProject.technologies.map((tech, i) => (
                       <span
-                        key={index}
+                        key={i}
                         className="px-3 py-1 bg-white text-black bg-opacity-20 rounded-md text-xs sm:text-sm"
                       >
                         {tech}
@@ -129,35 +122,31 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Buttons */}
+                {/* Action Buttons */}
                 <div className="flex justify-between sm:gap-3">
                   {selectedProject.url && selectedProject.url !== '#' && (
                     <a
                       href={selectedProject.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className=" inline-flex items-center justify-center gap-3 px-4 py-2 text-gray-600 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full text-sm font-medium"
+                      className="inline-flex items-center justify-center gap-3 px-4 py-2 text-gray-600 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full text-sm font-medium"
                     >
                       <span className="leading-none">Go to {selectedProject.name}</span>
                       <span className="text-2xl flex items-center justify-center leading-none">→</span>
                     </a>
                   )}
 
-                  {/* Only show for CourtBook */}
                   {selectedProject.id === 1 && (
                     <Button
                       variant="contained"
                       color="primary"
-                      border='1px solid white'
                       href={selectedProject.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       startIcon={<LaunchIcon />}
                       sx={{
                         bgcolor: '#2c2f48',
-                        '&:hover': {
-                          bgcolor: '#3a3d5c',
-                        },
+                        '&:hover': { bgcolor: '#3a3d5c' },
                         color: 'white',
                         border: '1px solid gray',
                         textTransform: 'none',
@@ -175,6 +164,7 @@ export default function Projects() {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

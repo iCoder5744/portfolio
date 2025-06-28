@@ -1,20 +1,22 @@
-// components/FloatingBackground.js
 "use client";
 
 export default function FloatingBackground() {
   return (
     <>
-      {/* Animated Background Elements */}
-<div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating Particles */}
-        <div className="absolute top-20 left-10 w-3 h-3 bg-blue-500 rounded-full animate-float opacity-40"></div>
-        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400 rounded-full animate-float-reverse opacity-50"></div>
-        <div className="absolute top-60 left-1/4 w-4 h-4 bg-cyan-400 rounded-full animate-float opacity-30"></div>
-        <div className="absolute bottom-40 right-10 w-3 h-3 bg-indigo-500 rounded-full animate-float-reverse opacity-40"></div>
-        <div className="absolute bottom-60 left-20 w-2 h-2 bg-blue-300 rounded-full animate-float opacity-60"></div>
-        <div className="absolute top-32 right-1/3 w-5 h-5 bg-purple-300 rounded-full animate-pulse opacity-20"></div>
-        <div className="absolute top-80 left-12 w-3 h-3 bg-cyan-500 rounded-full animate-float-reverse opacity-45"></div>
-        <div className="absolute bottom-80 right-16 w-4 h-4 bg-blue-400 rounded-full animate-float opacity-35"></div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Floating Particles: existing + new, spread across full screen */}
+        <div className="absolute top-20 left-10 w-3 h-3 bg-blue-500 rounded-full animate-float opacity-40" />
+        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400 rounded-full animate-float-reverse opacity-50" />
+        <div className="absolute top-60 left-1/4 w-4 h-4 bg-cyan-400 rounded-full animate-float opacity-30" />
+        <div className="absolute bottom-40 right-10 w-3 h-3 bg-indigo-500 rounded-full animate-float-reverse opacity-40" />
+        <div className="absolute bottom-60 left-20 w-2 h-2 bg-blue-300 rounded-full animate-float opacity-60" />
+        <div className="absolute top-32 right-1/3 w-5 h-5 bg-purple-300 rounded-full animate-pulse opacity-20" />
+        <div className="absolute top-80 left-12 w-3 h-3 bg-cyan-500 rounded-full animate-float-reverse opacity-45" />
+        <div className="absolute bottom-80 right-16 w-4 h-4 bg-blue-400 rounded-full animate-float opacity-35" />
+        {/* New middle spread elements */}
+        <div className="absolute top-1/2 left-[10%] w-3 h-3 bg-purple-300 rounded-full animate-float opacity-40" />
+        <div className="absolute top-[45%] right-[15%] w-4 h-4 bg-cyan-400 rounded-full animate-float-reverse opacity-50" />
+        <div className="absolute top-[60%] left-[50%] w-3 h-3 bg-blue-500 rounded-full animate-float opacity-45" />
 
         {/* Network Connection Lines */}
         <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
@@ -37,19 +39,25 @@ export default function FloatingBackground() {
           <line x1="70%" y1="85%" x2="85%" y2="65%" stroke="url(#lineGradient2)" strokeWidth="1" className="animate-pulse" />
         </svg>
 
-        {/* Floating Code Symbols */}
+        {/* Floating Code Symbols (enhanced) */}
         <div className="absolute top-24 right-16 text-blue-400 opacity-20 animate-float text-xl font-mono">{'<>'}</div>
         <div className="absolute bottom-32 left-16 text-purple-400 opacity-25 animate-float-reverse text-lg font-mono">{'{}}'}</div>
         <div className="absolute top-48 left-32 text-cyan-400 opacity-20 animate-float text-md font-mono">{'</>'}</div>
         <div className="absolute bottom-48 right-32 text-indigo-400 opacity-20 animate-float-reverse text-lg font-mono">{'()='}</div>
         <div className="absolute top-72 right-12 text-blue-300 opacity-25 animate-float text-sm font-mono">{'[]'}</div>
         <div className="absolute bottom-72 left-24 text-purple-300 opacity-20 animate-float-reverse text-md font-mono">{'&&'}</div>
+        {/* New Symbols Center Area */}
+        <div className="absolute top-1/2 left-1/3 text-pink-400 opacity-25 animate-float text-lg font-mono">{'=>=>'}</div>
+        <div className="absolute top-[58%] right-1/4 text-yellow-400 opacity-25 animate-float-reverse text-md font-mono">{'~~'}</div>
+        <div className="absolute top-[40%] left-[45%] text-cyan-500 opacity-20 animate-float text-md font-mono">{'<div>'}</div>
 
         {/* Geometric Shapes */}
         <div className="absolute top-16 left-1/2 w-6 h-6 border border-blue-500 opacity-15 animate-spin-slow"></div>
         <div className="absolute bottom-20 right-1/4 w-5 h-5 border border-purple-400 opacity-20 animate-bounce-slow rotate-45"></div>
         <div className="absolute top-96 right-12 w-8 h-8 border-2 border-cyan-300 rounded-full opacity-10 animate-pulse"></div>
         <div className="absolute bottom-96 left-16 w-7 h-7 border border-indigo-400 opacity-15 animate-spin-slow rotate-45"></div>
+        {/* New shape in center area */}
+        <div className="absolute top-[50%] right-[50%] w-6 h-6 border border-pink-300 rounded-full opacity-15 animate-spin-slow" />
 
         {/* Glowing Orbs */}
         <div className="absolute top-28 left-20 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-8 animate-float blur-sm"></div>
@@ -58,7 +66,6 @@ export default function FloatingBackground() {
         <div className="absolute bottom-64 left-32 w-8 h-8 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full opacity-12 animate-float-reverse blur-sm"></div>
       </div>
 
-      {/* CSS Animations */}
       <style jsx global>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }
