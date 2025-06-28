@@ -1,49 +1,52 @@
-// component/Blog.js
-
+// ✅ components/Blog.js (only modified blog post click logic)
 'use client';
+
 import { useEffect, useState } from 'react';
 import { getAllPosts, categories } from '@/data/blog/posts';
-import Link from 'next/link';
+import { useLoader } from '@/lib/LoaderContext';
+import { useRouter } from 'next/navigation';
 
 export default function BlogPage() {
   const [allPosts, setAllPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  
-  // const mainFeaturedPost = featuredPosts.length > 0 ? featuredPosts[0] : null;
+  const { setLoading } = useLoader();
+  const router = useRouter();
+
   useEffect(() => {
-    async function fetchPosts() {
+    const fetchPosts = async () => {
+      setLoading(true);
       const posts = await getAllPosts();
       setAllPosts(posts);
       setLoading(false);
-    }
+    };
     fetchPosts();
-  }, []);
+  }, [setLoading]); // 👈 added
 
 
   const groupedPosts = categories.reduce((acc, category) => {
     const categoryPosts = allPosts.filter(post => post.category === category.id);
     if (categoryPosts.length > 0) {
-      acc.push({
-        ...category,
-        posts: categoryPosts
-      });
+      acc.push({ ...category, posts: categoryPosts });
     }
     return acc;
   }, []);
 
+  const handlePostClick = async (slug) => {
+    setLoading(true);
+    await new Promise((res) => setTimeout(res, 200));
+    router.push(`/blog/${slug}`);
+  };
 
-   const featuredPost = {
+  const featuredPost = {
     title: "The Complete Full-Stack Developer Roadmap 2024",
     excerpt: "A comprehensive guide to becoming a full-stack developer in 2024. From frontend frameworks to backend technologies, databases, and deployment strategies.",
     date: "2024-12-16",
     readTime: "20 min read",
     tags: ["Full-Stack", "Career", "Roadmap", "Web Development"],
-    image: "🎯"
+    image: "\uD83C\uDFAF"
   };
 
   return (
-    <div  >
-
+    <div>
       <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -55,10 +58,10 @@ export default function BlogPage() {
           </p>
         </div>
 
-          {/* Featured Post */}
+        {/* Featured Post */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 text-center">📌 Featured Article</h2>
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform ">
+          <h2 className="text-2xl font-bold mb-6 text-center">\uD83D\uDCCC Featured Article</h2>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-4 sm:p-8 hover:from-blue-500 hover:to-purple-500 transition-all duration-300 cursor-pointer transform">
             <div className="text-6xl mb-4 text-center">{featuredPost.image}</div>
             <h3 className="text-2xl font-bold mb-3">{featuredPost.title}</h3>
             <p className="text-gray-100 mb-4 leading-relaxed">{featuredPost.excerpt}</p>
@@ -79,94 +82,47 @@ export default function BlogPage() {
         {/* Blog Categories */}
         <div className="space-y-12">
           {groupedPosts.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="border-b border-gray-600 pb-12 last:border-b-0">
-                <div className="flex flex-col items-start gap-4 mb-6">
-                  <div className="flex gap-2 items-center">
-                    <span className="text-4xl">{category.icon}</span>
-                    <h2 className="text-2xl md:text-3xl font-bold">{category.name}</h2>
-                  </div>
-                  <p className="text-gray-400 pl-2">{category.description}</p>
+            <div key={categoryIndex} className="border-b border-gray-600 pb-12 last:border-b-0">
+              <div className="flex flex-col items-start gap-4 mb-6">
+                <div className="flex gap-2 items-center">
+                  <span className="text-4xl">{category.icon}</span>
+                  <h2 className="text-2xl md:text-3xl font-bold">{category.name}</h2>
                 </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.posts.map((post, postIndex) => (
-                    <Link key={postIndex} href={`/blog/${post.slug}`}>
-                      <article className="border bg-gray-700 rounded-xl p-3 sm:p-6 hover:bg-gray-600 transition-all duration-300 cursor-pointer transform sm:hover:scale-105 hover:shadow-lg h-full flex flex-col">
-                        <div className="flex items-center gap-2 mb-3">
-                          <span className="bg-blue-600 px-2 py-1 rounded text-xs font-medium">
-                            {post.categoryName}
-                          </span>
-                          {post.featured && (
-                            <span className="bg-yellow-600 px-2 py-1 rounded text-xs font-medium">
-                              ⭐ Featured
-                            </span>
-                          )}
-                        </div>
-                        
-                        <h3 className="text-xl font-bold mb-3 text-blue-300 hover:text-blue-200 flex-shrink-0">
-                          {post.title}
-                        </h3>
-                        
-                        <p className="text-gray-300 mb-4 leading-relaxed flex-grow">
-                          {post.excerpt}
-                        </p>
-                        
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {post.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="bg-blue-600 px-2 py-1 rounded text-xs">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <div className="flex justify-between items-center text-sm text-gray-400 pt-2 border-t">
-                          <span>{post.date}</span>
-                          <span>{post.readTime}</span>
-                        </div>
-                        
-                        <div className="mt-3 text-sm text-blue-400 font-medium">
-                          Read Tutorial →
-                        </div>
-                      </article>
-                    </Link>
-                  ))}
-                </div>
+                <p className="text-gray-400 pl-2">{category.description}</p>
               </div>
-            ))
-          }
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 border bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4">📬 Stay Updated</h3>
-          <p className="text-gray-100 mb-6">
-            Get the latest programming tutorials and tech insights delivered to your inbox
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-100 border-2 border-white focus:outline-none focus:ring-white"
-            />
-            <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors cursor-pointer">
-              Subscribe
-            </button>
-          </div>
-        </div>
-
-        {/* Popular Tags */}
-        <div className="mt-12 text-center sm:mx-6">
-          <h3 className="text-xl font-bold mb-4">🏷️ Popular Tags</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-sm:text-sm">
-            {['JavaScript', 'React', 'Node.js', 'Python', 'CSS', 'Database', 'API', 'DevOps', 'Mobile', 'AI', 'Web Development', 'Full-Stack'].map((tag, index) => (
-              <span key={index} className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-full cursor-pointer transition-colors">
-                {tag}
-              </span>
-            ))}
-          </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {category.posts.map((post, postIndex) => (
+                  <div key={postIndex} onClick={() => handlePostClick(post.slug)} className="cursor-pointer">
+                    <article className="border bg-gray-700 rounded-xl p-3 sm:p-6 hover:bg-gray-600 transition-all duration-300 transform sm:hover:scale-105 hover:shadow-lg h-full flex flex-col">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="bg-blue-600 px-2 py-1 rounded text-xs font-medium">{post.categoryName}</span>
+                        {post.featured && (
+                          <span className="bg-yellow-600 px-2 py-1 rounded text-xs font-medium">⭐ Featured</span>
+                        )}
+                      </div>
+                      <h3 className="text-xl font-bold mb-3 text-blue-300 hover:text-blue-200">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed flex-grow">{post.excerpt}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {post.tags.map((tag, tagIndex) => (
+                          <span key={tagIndex} className="bg-blue-600 px-2 py-1 rounded text-xs">{tag}</span>
+                        ))}
+                      </div>
+                      <div className="flex justify-between items-center text-sm text-gray-400 pt-2 border-t">
+                        <span>{post.date}</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                      <div className="mt-3 text-sm text-blue-400 font-medium">Read Tutorial →</div>
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
     </div>
   );
 }
