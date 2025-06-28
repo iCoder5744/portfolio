@@ -15,7 +15,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="h-screen overflow-hidden bg-[#0f0f23]">
+    <div className="min-h-screen overflow-hidden bg-[#0f0f23]">
       {/* Navbar would go here */}
       <Navbar />
 
