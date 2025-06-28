@@ -26,7 +26,7 @@ export default function Hero() {
       <FloatingBackground />
 
       {/* Content */}
-      <div className="  pt-4 px-2 sm:px-4 md:px-6 lg:px-16 mx-auto  w-full mt-2 sm:mt-4 md:mt-25 relative z-10">
+      <div className="  pt-6 px-2 sm:px-4 md:px-6 lg:px-16 mx-auto  w-full my-2 sm:my-4 md:my-20 relative z-10">
         <div className=" flex flex-col md:flex-row items-center justify-between gap-4 md:mt-6">
           
           {/* Left Text Section */}
