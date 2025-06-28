@@ -22,15 +22,15 @@ export default function Hero() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center relative overflow-hidden"
+        className="min-h-screen flex items-center relative overflow-hidden pt-0 mt-0"
       >
         {/* Animated Background Elements */}
         <FloatingBackground />
 
-        <div className="py-3 px-2 sm:px-4 md:px-6 lg:px-16 mx-auto w-full pt-0 sm:pt-8 md:pt-10 relative z-10">
+        <div className="px-2 sm:px-4 md:px-6 lg:px-16 mx-auto w-full pt-4 sm:pt-6 md:pt-8 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Text Content - order changes on mobile */}
-            <div className="  w-full md:w-1/2 order-1 flex flex-col justify-center md:justify-start max-md:items-center md:items-start max-md:text-center md:ml-5">
+            <div className="w-full md:w-1/2 order-2 flex justify-center md:justify-start items-center md:items-center mb-4 md:mb-0">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
