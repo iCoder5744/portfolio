@@ -27,19 +27,30 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="pt-12 bg-[#0f0f23] relative overflow-hidden">
+    <section id="about" className="pt-12 pb-4 px-1 bg-[#0f0f23] relative overflow-hidden">
       <FloatingBackground />
 
-      <div className="max-w-[1200px] shadow-xl mx-auto p-2 sm:px-6 lg:px-14 bg-transparent transition-all duration-300 relative z-10">
-        
+      <div className="max-w-[1100px] border-4 rounded-[3rem] sm:rounded-[4rem] border-white shadow-xl mx-auto py-5 px-1 sm:px-6 lg:px-14 bg-transparent transition-all duration-300 relative z-10">
+
         {/* About Heading & Description */}
-        <div className="mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl mb-8 text-center px-6 py-2 w-fit rounded-full mx-auto bg-gradient-to-r from-blue-700 to-purple-600 text-white">
-            About Me
+        <div className=" px-4 mb-5">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
+            <span className="relative inline-block">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-75 transform -rotate-2 scale-110"></span>
+              <span className="relative z-10 px-6 py-2 inline-block text-white">
+                About Me
+              </span>
+            </span>
           </h2>
-          <p className="text-gray-300 text-md sm:text-xl mb-4 text-center font-serif">
-            {`Hi, I'm Shivam Yadav — A Front-End Developer and a BCA student at the University of Lucknow. I build responsive, user-friendly web apps using React, Next.js, and Tailwind CSS. I'm expanding into full-stack development and working on blog projects to sharpen my skills. My goal is to build clean, effective solutions and contribute to impactful projects.`}
-          </p>
+
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
+            <div className="relative bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+              <p className="text-gray-200 text-md sm:text-lg leading-relaxed font-medium">
+                {`Hi, I'm Shivam Yadav — A Front-End Developer and a BCA student at the University of Lucknow. I build responsive, user-friendly web apps using React, Next.js, and Tailwind CSS. I'm expanding into full-stack development and working on blog projects to sharpen my skills. My goal is to build clean, effective solutions and contribute to impactful projects.`}
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Education Section */}
@@ -68,11 +79,12 @@ export default function About() {
         <Skills />
         <Projects />
         <Contact />
+        <div className="border-t border-white">
+          <Footer />
+        </div>
       </div>
 
-      <div className="border-t border-white">
-        <Footer />
-      </div>
+
     </section>
   );
 }

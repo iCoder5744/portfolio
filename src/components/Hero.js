@@ -61,7 +61,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#a1a1aa] max-sm:flex flex-col mb-2 sm:mb-4">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl text-white max-sm:flex flex-col mb-2 sm:mb-4">
                     <span>A Front End Developer | Web</span>
                     <span className="text-yellow-400"> Designer</span>
                   </h3>
@@ -118,7 +118,7 @@ export default function Hero() {
                 {/* Glowing background */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,235,59,0.3)_0%,transparent_70%)] rounded-full blur-[60px] -z-10"></div>
 
-                <div className="w-54 h-54 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] p-1.5 animate-pulse relative overflow-hidden">
+                <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] p-1.5 animate-pulse relative overflow-hidden">
                   <div className="w-full h-full rounded-full overflow-hidden relative">
                     <Image
                       src="/images/Profile.png"
