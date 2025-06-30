@@ -21,7 +21,7 @@ export default function BlogPost({ post }) {
 
       <div className="p-2 sm:p-6 md:p-10 text-white">
         {/* Back to Blog */}
-        <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors">
+        <Link href="/blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mt-2 mb-6 transition-colors">
           <span className="mr-2">←</span>
           Back to Blog
         </Link>
@@ -139,13 +139,13 @@ export default function BlogPost({ post }) {
 
         {/* Article Actions */}
         <div className="flex flex-wrap gap-2 sm:gap-4 justify-around mb-8">
-          <button className="bg-blue-600 hover:bg-blue-700 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+          <button className="cursor-pointer bg-blue-600 hover:bg-blue-700 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>👍</span> Helpful
           </button>
-          <button className="bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+          <button className="cursor-pointer bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>🔗</span> Share
           </button>
-          <button className="bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+          <button className="cursor-pointer bg-gray-700 hover:bg-gray-600 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
             <span>💾</span> Save
           </button>
         </div>

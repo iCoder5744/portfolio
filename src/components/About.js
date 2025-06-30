@@ -33,7 +33,7 @@ export default function About() {
       <div className="max-w-[1100px] border-4 rounded-[3rem] sm:rounded-[4rem] border-white shadow-xl mx-auto py-5 px-1 sm:px-6 lg:px-14 bg-transparent transition-all duration-300 relative z-10">
 
         {/* About Heading & Description */}
-        <div className=" px-4 mb-5">
+        <div className="px-0 sm:px-4 mb-5">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center">
             <span className="relative inline-block">
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-75 transform -rotate-2 scale-110"></span>
@@ -45,7 +45,7 @@ export default function About() {
 
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
-            <div className="relative bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-6">
+            <div className="relative bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-2 sm:p-4 md:p-6">
               <p className="text-gray-200 text-md sm:text-lg leading-relaxed font-medium">
                 {`Hi, I'm Shivam Yadav — A Front-End Developer and a BCA student at the University of Lucknow. I build responsive, user-friendly web apps using React, Next.js, and Tailwind CSS. I'm expanding into full-stack development and working on blog projects to sharpen my skills. My goal is to build clean, effective solutions and contribute to impactful projects.`}
               </p>

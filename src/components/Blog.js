@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { getAllPosts, categories } from '@/data/blog/posts';
 import { useLoader } from '@/lib/LoaderContext';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function BlogPage() {
   const [allPosts, setAllPosts] = useState([]);
@@ -114,8 +115,10 @@ export default function BlogPage() {
                         <span>{post.date}</span>
                         <span>{post.readTime}</span>
                       </div>
-                      <div className="mt-3 text-sm text-blue-400 font-medium">Read Tutorial →</div>
-                    </article>
+                      <Link href={`/blog/${post.slug}`} className="mt-3 text-sm text-blue-400 font-medium cursor-pointer">
+                        Read Tutorial →
+                      </Link>                    
+                      </article>
                   </div>
                 ))}
               </div>
