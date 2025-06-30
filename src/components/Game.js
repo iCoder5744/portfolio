@@ -10,7 +10,7 @@ export default function GamePage() {
 
     <div className="p-10 text-white">
       <h1 className="text-2xl font-bold">Game Page</h1>
-      <p className="mt-4">This is your blog content.</p>
+      <p className="mt-4">This is your Game Content.</p>
       </div>
 
       {/* Contact */}
