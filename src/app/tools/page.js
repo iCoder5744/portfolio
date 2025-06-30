@@ -39,21 +39,21 @@ export default function ToolsPage() {
         <div className='border-b border-gray-600'>
           <Header />
         </div>
-        <div className="p-2 sm:p-6 md:p-10 text-white">
+        <div className="p-1 sm:p-3 md:p-6 text-white">
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 mt-4 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Available Tools</h1>
 
-            <p className='text-xl text-center text-white px-4 md:px-10 lg:px-14 mb-10'>A file converter and all-in-one calculator is a versatile tool that lets users easily convert files between formats and perform multiple mathematical functions within a single, user-friendly interface.</p>
+            <p className='text-xl text-center text-gray-300 px-2 md:px-10 lg:px-14 mb-10'>A file converter and all-in-one calculator is a versatile tool that lets users easily convert files between formats and perform multiple mathematical functions within a single, user-friendly interface.</p>
 
           </div>
-          <div className="grid sm:grid-cols-2 gap-6 px-4 lg:px-14 pb-12  ">
+          <div className="grid sm:grid-cols-2 gap-6 px-2 sm:px-4 lg:px-14 pb-12  ">
             {tools.map((tool) => (
-              <div key={tool.slug} className="border border-white rounded-xl p-6 lg:m-6 bg-gray-700 text-white">
+              <div key={tool.slug} className="border border-white rounded-xl p-3 sm:p-4 lg:m-6 bg-gray-700 text-white">
                 <div className="inline-block rounded-md bg-blue-600 px-2 py-1">
                   <h2 className="text-md font-semibold text-white">{tool.title}</h2>
                 </div>
 
-                <p className="mt-2 mb-4 text-sm text-gray-300">{tool.description}</p>
+                <p className="mt-2 mb-4 text-md text-gray-300">{tool.description}</p>
                 <Link
                   href={`/tools/${tool.slug}`}
                   className="inline-block border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition"
