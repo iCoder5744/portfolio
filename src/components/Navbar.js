@@ -40,9 +40,9 @@ export default function Navbar() {
   return (
     <nav
       className="py-3 px-4 sm:px-6 md:px-10 lg:px-16 mx-auto flex justify-between items-center sm:sticky top-0 z-20 transition-all duration-300"
-      style={{
-        background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
-      }}
+      // style={{
+      //   background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
+      // }}
     >
       <Link href="/">
         <div className="flex items-center gap-2 cursor-pointer">

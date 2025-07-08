@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full transition-colors duration-300">
+    <main className="w-full min-h-screen bg-[#0f0f23] overflow-x-hidden">
       
       <Hero />
       <About />

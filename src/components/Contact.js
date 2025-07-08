@@ -11,10 +11,10 @@ import {
 
 export default function Contact() {
   const socialLinks = [
-    { name: 'LinkedIn', icon: <LinkedIn />, url: '#', color: '#0077b5' },
-    { name: 'Instagram', icon: <Instagram />, url: '#', color: '#E4405F' },
+    { name: 'LinkedIn', icon: <LinkedIn />, url: 'https://www.linkedin.com/in/shivam-yadav-b97159320/', color: '#0077b5' },
+    { name: 'Instagram', icon: <Instagram />, url: 'https://www.instagram.com/_c_vam/', color: '#E4405F' },
+    { name: 'Telegram', icon: <Telegram />, url: 'https://web.telegram.org/k/', color: '#0088cc' },
     { name: 'Facebook', icon: <Facebook />, url: '#', color: '#1877F2' },
-    { name: 'Telegram', icon: <Telegram />, url: '#', color: '#0088cc' },
     { name: 'Twitter', icon: <Twitter />, url: '#', color: '#000000' }
   ];
 

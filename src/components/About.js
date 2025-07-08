@@ -47,7 +47,7 @@ export default function About() {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
             <div className="relative bg-gray-800/80 backdrop-blur-sm border border-gray-700 rounded-lg p-2 sm:p-4 md:p-6">
               <p className="text-gray-200 text-md sm:text-lg leading-relaxed font-medium">
-                {`Hi, I'm Shivam Yadav — A Front-End Developer and a BCA student at the University of Lucknow. I build responsive, user-friendly web apps using React, Next.js, and Tailwind CSS. I'm expanding into full-stack development and working on blog projects to sharpen my skills. My goal is to build clean, effective solutions and contribute to impactful projects.`}
+                {`I’m a BCA Student at the University of Lucknow, Specializing in building responsive, user-friendly web applications. With a strong foundation in HTML, CSS, JavaScript, and React.js, I’m now expanding my expertise into backend development to create full-stack solutions. My goal is to tackle complex problems with innovative approaches and contribute to meaningful, high-impact projects.`}
               </p>
             </div>
           </div>
